@@ -42,7 +42,7 @@
       ]
     },
     {
-      "path": "/02-ooping",
+      "path": "/02-ooping-1",
       "dirs": [
         {
           "path": "/examples",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "path": "/04-using-a-state-property",
+      "path": "/04-ooping-2",
       "dirs": [
         {
           "path": "/examples",
