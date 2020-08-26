@@ -1,0 +1,233 @@
+# Encapsulation
+
+> "Encapsulation is one of the fundamentals of OOP (object-oriented programming). It refers to the bundling of data with the methods that operate on that data. "
+> - [Rebus](https://press.rebus.community/programmingfundamentals/chapter/encapsulation/)
+
+_Encapsulation_ is the idea of grouping together your data with the functions that use it. That's it! (for now :)  There are many ways to achieve this, but the end result is code that is easier to understand and nicer work with.
+
+Heads up!  In this module you'll be encountering some of the most important (and most challenging!) aspects of the JavaScript language `this`, inheritance & classes.  These are all features of JS that allow you to encapsulate functions & data for readable, reusable code.
+
+Along the way you will get your first introduction to one of the main programming paradigms in JS: _object oriented_.  At their simplest level, programming paradigms are just different answers to the same question "How will I group my data and my functions?".
+
+## Contents
+
+- [Learning Objectives](#learning-objectives)
+  - [Vocabulary](#vocabulary)
+  - [Soft Skills](#soft-skills)
+  - [Hard Skills](#hard-skills)
+<!-- - [About the Projects](#about-the-projects) -->
+- [Suggested Study](#suggested-study)
+- Sundays & Projects
+  - [Week 1](#week-1)
+  - [Week 2](#week-2)
+  - [Week 3](#week-3)
+- [Class Recordings](#class-recordings)
+- [Curriculum](https://home.hackyourfuture.be/curriculum) (external)
+- [HYF Home](https://home.hackyourfuture.be/) (external)
+
+---
+
+## Learning Objectives
+
+### Vocabulary
+
+- **Encapsulation**
+- **Object Oriented Programming**
+- **Inheritance**
+- **Code Reuse (DRY)**
+
+### Soft Skills
+
+- Data-first development
+  - Understanding applications as Data + User Interactions
+  - Developing from the "inside" out: Writing the core object before the user interface
+- Object Oriented TDD
+  - Using tests to define and verify OOP programs
+
+### Hard Skills
+
+- `function () {}` vs. `() => {}`
+  - How does each one treat `this` differently?
+- Use the keyword `this`
+  - Be able to refactor functions into methods
+  - Be able to refactor methods into functions
+  - Plan and implement objects based on User Stories
+- Use `getters` and `setters`
+  - Be able to refactor between properties, methods and getters/setters
+- Understand _prototypical inheritance_
+- Use ES6 `Class`es to organize your code
+  - Be able to refactor between constructor functions & classes
+  - Use classes to create simple programs
+- `bind`ing handlers to `this`
+- Closure 101:
+  - Using `() => {}` handlers to avoid binding
+
+[TOP](#encapsulation)
+
+---
+
+## Suggested Study
+
+### Helpful Links
+
+- [Practical JavaScript Tutorial](https://watchandcode.com/p/practical-javascript) (best tutorial ever)
+- [study.hyf.be/js/oop](https://study.hackyourfuture.be/javascript/oop) (more links)
+
+### [Isolate](./isolate/index.html)
+
+### [Integrate](./integrate/README.md)
+
+### [Code to Study](./code-to-study/README.md)
+
+### TDD Repos
+
+- [numbery-organizer](https://github.com/hackyourfuturebelgium/numbery-organizer)
+- [Bowling](https://github.com/codicepulito/tdd-js-tutorial-bowling)
+- Iron Hack: [Maze (constructor)](https://github.com/ironhack-labs/lab-javascript-maze), [Vikings (classes)](https://github.com/ironhack-labs/lab-javascript-vikings)
+- Rolling Scopes: [TicTacToe](https://github.com/rolling-scopes-school/tic-tac-toe), [Finite State Machine](https://github.com/rolling-scopes-school/finite-state-machine)
+- [Kata for Fun (not only OOP)](https://github.com/edsonha/kata-for-fun)
+
+[TOP](#encapsulation)
+
+## Week 1
+
+Learn to use `function () {}` functions and `this` to encapsulate your data and logic.
+
+### Prep Work
+
+> before class
+
+- [Traversy OOP Crashcourse](https://www.youtube.com/watch?v=vDJpGenyHaA) (first 10 minutes)
+- [javascript.info/object-methods](https://javascript.info/object-methods)
+- [StackOverflow](https://stackoverflow.com/questions/17486854/how-to-create-a-method-in-object-literal-notation)
+- [() => {} vs. function() {}](https://medium.com/javascript-in-plain-english/javascript-arrow-functions-vs-functions-3f6ce860f8b5)
+  - In this module you will be using `function` instead of `() => {}`
+- [Isolate](./isolate/index.html): Functions to Methods
+
+### Lesson Plan
+
+> during class
+
+#### Isolate
+
+
+#### Integrate
+
+
+### Project
+
+> after class
+
+Your project for the next two weeks is to build something inspired by the [Practical JavaScript Tutorial](https://watchandcode.com/p/practical-javascript) (best tutorial ever).  To help you get off the ground here is a [starter repository](), and an [example project]() that has a small app to help you find your way around the starter.
+
+You don't find a todo app so interesting?  not a problem!  Your group is free to invent a new project idea, just be careful about _scoping_!
+
+#### Checklist
+
+```md
+- [ ] [repo](https://github.com/_/_) (with a complete README)
+- [ ] [live demo](https://_.github.io/_)
+- Project Planning
+  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
+  - [ ] [Communication](https://github.com/_/_/tree/master/project-planning/backlog.md)
+  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
+  - [ ] [Project board](https://github.com/_/_/projects/_)
+- Implementation
+  - [ ] ES Modules (`import`/`export`)
+  - [ ] Tests for logic & view methods
+  - [ ] Initial state in `src/data.js`
+  - [ ] Logs of each user interaction
+```
+
+[TOP](#encapsulation)
+
+---
+
+## Week 2
+
+Learn to _bind_ `this` to your app's event handlers
+
+### Prep Work
+
+> before class
+
+- [Examples of `this` and bind](https://www.youtube.com/watch?v=PIkA60I0dKU)
+- Zach Gordon: [this](https://www.youtube.com/watch?v=2qMKjWf1KdE), [binding this](https://www.youtube.com/watch?v=73aAyap_88w), [example: event handlers](https://www.youtube.com/watch?v=sxRnmKldiBs)
+- [Binding example in JS Tutor](http://www.pythontutor.com/javascript.html#code=function%20returnThis%28%29%20%7B%0A%20%20return%20this%3B%0A%7D%0Aconst%20demo0%20%3D%20returnThis%28%29%3B%0A%0Aconst%20obj1%20%3D%20%7B%0A%20%20id%3A%201,%0A%20%20returnThis%0A%7D%3B%0Aconst%20demo1%20%3D%20obj1.returnThis%28%29%3B%0A%0Aconst%20obj2%20%3D%20%7B%20id%3A%202%20%7D%3B%0Aconst%20boundToObj2%20%3D%20returnThis.bind%28obj2%29%3B%0Aconst%20demo2%20%3D%20boundToObj2%28%29%3B%0A%0Aconst%20boundToLiteral%20%3D%20returnThis.bind%28%7B%20id%3A%203%20%7D%29%3B%0Aconst%20demo3%20%3D%20boundToLiteral%28%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+
+### Lesson Plan
+
+> during class
+
+#### Isolate
+
+
+#### Integrate
+
+
+### Project
+
+> after class
+
+... finish the project you began last week.
+
+[TOP](#encapsulation)
+
+---
+
+## Week 3
+
+Learn to use `Class`es for a reusable code base.
+
+### Prep Work
+
+> before class
+
+### Lesson Plan
+
+> during class
+
+#### Isolate
+
+
+#### Integrate
+
+
+### Project
+
+> after class
+
+
+
+#### Checklist
+
+```md
+```
+
+[TOP](#encapsulation)
+
+---
+
+## Class Recordings
+
+Screen recordings of class.  Coaches, when sending your PR's with links please ...
+
+- Add a link to your video in the correct module's section
+- Indicate which class you were teaching
+- Which week it was
+- Give your name
+- and a helpful description
+
+---
+
+## Class 7 & 8
+
+> [Anthony](https://github.com/Toinne/), [Bram](https://github.com/bramdevries/)
+
+1. week 1:
+    - Part 1: [`this`](https://vimeo.com/399611933)
+    - Part 2: [Object Oriented Programming](https://vimeo.com/399631422)
+2. week 2:
+    - Part 1: [binding, and why it matters](https://vimeo.com/401830596)
+    - Part 2: [binding handlers](https://vimeo.com/401853625)
+

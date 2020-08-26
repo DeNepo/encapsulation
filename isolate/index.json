@@ -1,0 +1,169 @@
+{
+  "path": "/",
+  "dirs": [
+    {
+      "path": "/01-functions-to-methods",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-write-to-object.js"
+            },
+            {
+              "path": "/2-read-from-object.js"
+            },
+            {
+              "path": "/3-read-and-write.js"
+            },
+            {
+              "path": "/4-two-methods.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/refactor-1.js"
+            },
+            {
+              "path": "/refactor-2.js"
+            },
+            {
+              "path": "/refactor-3.js"
+            },
+            {
+              "path": "/refactor-4.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/02-ooping",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-sum.js"
+            },
+            {
+              "path": "/2-name-tag.js"
+            },
+            {
+              "path": "/3-entries.js"
+            },
+            {
+              "path": "/4-method-reuse.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/1-read-from.js"
+            },
+            {
+              "path": "/2-read-from.js"
+            },
+            {
+              "path": "/3-read-from.js"
+            },
+            {
+              "path": "/4-write-to.js"
+            },
+            {
+              "path": "/5-write-to.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/03-getters-and-setters",
+      "dirs": [
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/get-1.js"
+            },
+            {
+              "path": "/get-2.js"
+            },
+            {
+              "path": "/get-3.js"
+            },
+            {
+              "path": "/set-1.js"
+            },
+            {
+              "path": "/set-2.js"
+            },
+            {
+              "path": "/set-3.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/04-using-a-state-property",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-types.js"
+            },
+            {
+              "path": "/2-big-small.js"
+            },
+            {
+              "path": "/3-searchable.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/challenge-1.js"
+            },
+            {
+              "path": "/challenge-2.js"
+            },
+            {
+              "path": "/challenge-3.js"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "title": "encapsulation/isolate",
+    "path": "/",
+    "loopGuard": {
+      "active": false,
+      "max": 20
+    },
+    "buttons": [
+      {
+        "console": true
+      },
+      {
+        "debugger": true
+      },
+      {
+        "jsTutor": true
+      }
+    ]
+  }
+}
