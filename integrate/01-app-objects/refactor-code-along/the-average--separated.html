@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>the average - separated</title>
+
+  <style>
+    .discreet {
+      color: darkgray;
+      font-style: italic;
+    }
+
+    .numbers-list {
+      list-style: none;
+    }
+
+    .digital {
+      font-family: monospace;
+    }
+  </style>
+
+</head>
+
+<body>
+  <main id='user interface'>
+    <button onclick='console.log(log)'>log</button>
+    <br>
+    what happens when you try clicking on a view in the log?
+    <hr>
+    <form id="add-number-form" action="#">
+      <input id='number-input' type='number' value='0'>
+      <button>add number to list</button>
+      <br>
+      <button type="button" id='reset-button'>reset</button>
+    </form>
+    <br>
+    <br>
+    <div id='average'></div>
+    <hr>
+    <div id='numbers-list'></div>
+  </main>
+
+  <script src='../../../app/lib/deep-clone.js'></script>
+
+  <script id='data'>
+    'use strict';
+    const state = {
+      numbers: [],
+      average: 0
+    };
+  </script>
+
+  <script id='logic'>
+    'use strict';
+    /**
+     * computes the average of all numbers in an array
+     * if the array has no entries, it returns 0
+     * @param {number[]} arrOfNumbers - an array of numbers to average
+     * @returns {number} the average of all numbers in the array
+     */
+    const average = (arrOfNumbers) => {
+      if (arrOfNumbers.length === 0) {
+        return 0;
+      }
+      const numberOfNumbers = arrOfNumbers.length;
+      const sum = arrOfNumbers.reduce((sum, next) => sum + next);
+      const average = sum / numberOfNumbers;
+      return average;
+    };
+  </script>
+
+  <script id='views'>
+    const renderNumberList = (arrOfNumbers) => {
+      const ulEl = document.createElement('ul');
+      ulEl.className = 'numbers-list';
+      for (let i = 0; i < arrOfNumbers.length; i++) {
+        const liEl = document.createElement('li');
+        liEl.className = 'digital';
+        liEl.innerHTML = arrOfNumbers[i];
+        ulEl.appendChild(liEl);
+      }
+      return ulEl;
+    };
+    const renderAverage = (average) => {
+      const pEl = document.createElement('p');
+      pEl.innerHTML = 'average: ' + average;
+      pEl.className = 'discreet';
+      return pEl;
+    };
+  </script>
+
+  <script id='handlers'>
+    'use strict';
+
+    const addNumberHandler = () => {
+      const logEntry = {
+        action: 'add number'
+      };
+      log.push(logEntry);
+      const inputEl = document.getElementById('number-input');
+      const userInput = Number(inputEl.value);
+
+      // log user input
+      logEntry.input = userInput;
+      // update state
+      state.numbers.push(userInput);
+      state.average = average(app.state.numbers);
+      // log new state
+      logEntry.state = deepClone(state);
+
+      // update UI from state
+
+      // re-render the average
+      const averageContainer = document.getElementById('average');
+      averageContainer.innerHTML = '';
+      const renderedAverage = renderAverage(app.state.average);
+      averageContainer.appendChild(renderedAverage);
+      // log new view rendered from state
+      logEntry.viewAverage = renderedAverage;
+
+      // re-render the list of numbers
+      const numbersContainer = document.getElementById('numbers-list');
+      numbersContainer.innerHTML = '';
+      const renderedList = renderNumberList(app.state.numbers);
+      numbersContainer.appendChild(renderedList);
+      // log new view rendered from state
+      logEntry.viewNumbers = renderedList;
+    };
+
+    const resetHandler = () => {
+      const logEntry = {
+        action: 'reset'
+      };
+      log.push(logEntry);
+
+      // reset state to it's initial values
+      state.numbers = [];
+      state.average = 0;
+      // log new state
+      logEntry.state = deepClone(state);
+
+      // reset Ui
+      document.getElementById('number-input').value = 0;
+      // re-render the average
+      const averageContainer = document.getElementById('average');
+      averageContainer.innerHTML = '';
+      const renderedAverage = renderAverage(app.state.average);
+      averageContainer.appendChild(renderedAverage);
+      // log new view rendered from state
+      logEntry.viewAverage = renderedAverage;
+
+      // clear the numbers container
+      const numbersContainer = document.getElementById('numbers-list');
+      numbersContainer.innerHTML = '';
+    };
+  </script>
+
+  <script id='init'>
+    const log = [];
+
+    window.onload = () => {
+      const initLog = {
+        state: deepClone(state)
+      };
+      log.push(initLog);
+      const averageContainer = document.getElementById('average');
+      const renderedAverage = renderAverage(state.average);
+      averageContainer.appendChild(renderedAverage);
+      // log new view rendered from state
+      initLog.viewAverage = renderedAverage;
+    };
+  </script>
+
+  <script id='listeners'>
+    // the listeners are all correct
+    document.getElementById('add-number-form')
+      .addEventListener('submit', addNumberHandler);
+    document.getElementById('reset-button')
+      .addEventListener('click', resetHandler);
+  </script>
+</body>
+
+</html>

@@ -15,7 +15,7 @@ Along the way you will get your first introduction to one of the main programmin
   - [Vocabulary](#vocabulary)
   - [Soft Skills](#soft-skills)
   - [Hard Skills](#hard-skills)
-<!-- - [About the Projects](#about-the-projects) -->
+- [About the Projects](#about-the-projects)
 - [Suggested Study](#suggested-study)
 - Sundays & Projects
   - [Week 1](#week-1)
@@ -41,26 +41,42 @@ Along the way you will get your first introduction to one of the main programmin
 - Data-first development
   - Understanding applications as Data + User Interactions
   - Developing from the "inside" out: Writing the core object before the user interface
+- Organizing your projects into _modules_
 - Object Oriented TDD
   - Using tests to define and verify OOP programs
 
 ### Hard Skills
 
-- `function () {}` vs. `() => {}`
-  - How does each one treat `this` differently?
 - Use the keyword `this`
   - Be able to refactor functions into methods
   - Be able to refactor methods into functions
   - Plan and implement objects based on User Stories
 - Use `getters` and `setters`
   - Be able to refactor between properties, methods and getters/setters
+- Using `import` & `export` to organize your codebase
 - Understand _prototypical inheritance_
 - Use ES6 `Class`es to organize your code
   - Be able to refactor between constructor functions & classes
   - Use classes to create simple programs
 - `bind`ing handlers to `this`
+- `function () {}` vs. `() => {}`
+  - How does each one treat `this` differently?
 - Closure 101:
   - Using `() => {}` handlers to avoid binding
+
+[TOP](#encapsulation)
+
+---
+
+## About the Projects
+
+Projects in this module will have all the same concerns as projects in the last module, they'll just be organized a little differently.  In the last module every function was a free-floating function written in a separate file and required separately into your .html files.
+
+In this module you'll learn how to:
+
+- _Encapsulate_ your application's data with the functions that operate on it using _object oriented programming_.
+- Organize your code base using _ES Modules_ (`import` and `export`). Yo
+- Reuse your methods with _inheritance_ and ES6 `class`es
 
 [TOP](#encapsulation)
 
@@ -73,13 +89,13 @@ Along the way you will get your first introduction to one of the main programmin
 - [Practical JavaScript Tutorial](https://watchandcode.com/p/practical-javascript) (best tutorial ever)
 - [study.hyf.be/js/oop](https://study.hackyourfuture.be/javascript/oop) (more links)
 
-### [Isolate](./isolate/index.html)
+### Code to Study
 
-### [Integrate](./integrate/README.md)
+- [Isolate](./isolate/index.html)
+- [Integrate](./integrate/README.md)
+- [Example Projects](./example-projects/README.md)
 
-### [Code to Study](./code-to-study/README.md)
-
-### TDD Repos
+### OOP TDD
 
 - [numbery-organizer](https://github.com/hackyourfuturebelgium/numbery-organizer)
 - [Bowling](https://github.com/codicepulito/tdd-js-tutorial-bowling)
@@ -108,17 +124,24 @@ Learn to use `function () {}` functions and `this` to encapsulate your data and 
 
 > during class
 
-#### Isolate
+#### [Isolate](./isolate/index.html)
 
+- Functions to Methods
+- Getters & Setters
 
-#### Integrate
+#### [Integrate](./integrate/index.html)
 
+- Refactor Code-Along
 
 ### Project
 
 > after class
 
-Your project for the next two weeks is to build something inspired by the [Practical JavaScript Tutorial](https://watchandcode.com/p/practical-javascript) (best tutorial ever).  To help you get off the ground here is a [starter repository](), and an [example project]() that has a small app to help you find your way around the starter.
+__*this is an individual project*__
+
+Your project this week is to build something inspired by the [Practical JavaScript Tutorial](https://watchandcode.com/p/practical-javascript) (best tutorial ever).
+
+To help you get off the ground here is a [starter repository](https://github.com/HackYourFutureBelgium/encapsulation-week-1-starter). There is already some code to
 
 You don't find a todo app so interesting?  not a problem!  Your group is free to invent a new project idea, just be careful about _scoping_!
 
@@ -129,12 +152,11 @@ You don't find a todo app so interesting?  not a problem!  Your group is free to
 - [ ] [live demo](https://_.github.io/_)
 - Project Planning
   - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Communication](https://github.com/_/_/tree/master/project-planning/backlog.md)
   - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
   - [ ] [Project board](https://github.com/_/_/projects/_)
 - Implementation
-  - [ ] ES Modules (`import`/`export`)
-  - [ ] Tests for logic & view methods
+  - [ ] Tests for core app object
+  - [ ] Tests for views (optional)
   - [ ] Initial state in `src/data.js`
   - [ ] Logs of each user interaction
 ```
@@ -169,7 +191,22 @@ Learn to _bind_ `this` to your app's event handlers
 
 > after class
 
-... finish the project you began last week.
+#### Checklist
+
+```md
+- [ ] [repo](https://github.com/_/_) (with a complete README)
+- [ ] [live demo](https://_.github.io/_)
+- Project Planning
+  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
+  - [ ] [Communication](https://github.com/_/_/tree/master/project-planning/backlog.md)
+  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
+  - [ ] [Project board](https://github.com/_/_/projects/_)
+- Implementation
+  - [ ] ES Modules (`import`/`export`)
+  - [ ] Tests for logic & view methods
+  - [ ] Initial state in `src/data.js`
+  - [ ] Logs of each user interaction
+```
 
 [TOP](#encapsulation)
 
