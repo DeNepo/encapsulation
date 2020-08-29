@@ -113,6 +113,7 @@ Learn to use `function () {}` functions and `this` to encapsulate your data and 
 
 > before class
 
+- [Mosh explains `this`](https://www.youtube.com/watch?v=gvicrj31JOM)
 - [Traversy OOP Crashcourse](https://www.youtube.com/watch?v=vDJpGenyHaA) (first 10 minutes)
 - [javascript.info/object-methods](https://javascript.info/object-methods)
 - [StackOverflow](https://stackoverflow.com/questions/17486854/how-to-create-a-method-in-object-literal-notation)
