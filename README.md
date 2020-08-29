@@ -116,8 +116,8 @@ Learn to use `function () {}` functions and `this` to encapsulate your data and 
 - [Traversy OOP Crashcourse](https://www.youtube.com/watch?v=vDJpGenyHaA) (first 10 minutes)
 - [javascript.info/object-methods](https://javascript.info/object-methods)
 - [StackOverflow](https://stackoverflow.com/questions/17486854/how-to-create-a-method-in-object-literal-notation)
-- [() => {} vs. function() {}](https://medium.com/javascript-in-plain-english/javascript-arrow-functions-vs-functions-3f6ce860f8b5)
-  - In this module you will be using `function` instead of `() => {}`
+- [() => {} vs. function() {}](https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/)
+  - In this module you will be learning to use `function`
 - [Isolate](./isolate/index.html): Functions to Methods
 
 ### Lesson Plan
