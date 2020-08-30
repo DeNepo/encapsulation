@@ -1,41 +1,7 @@
 
 
 <!-- BEGIN TOC -->
-<li style='list-style-type: none;'><details><summary>/refactors</summary>
-
-<ul>  <li style='list-style-type: none;'><details><summary>/simple-javascript-quiz</summary>
-
-<ul>    <li style='list-style-type: none;'><details><summary>/0-tutorial</summary>
-
-<ul><ul>      <li><a href="./refactors/simple-javascript-quiz/0-tutorial/index.html" target="_blank">/index.html</a></li>
-</ul>
-</ul></details></li>    <li style='list-style-type: none;'><details><summary>/1-separate</summary>
-
-<ul><ul>      <li><a href="./refactors/simple-javascript-quiz/1-separate/index.html" target="_blank">/index.html</a></li>
-</ul>
-</ul></details></li>    <li style='list-style-type: none;'><details><summary>/2-views</summary>
-
-<ul><ul>      <li><a href="./refactors/simple-javascript-quiz/2-views/index.html" target="_blank">/index.html</a></li>
-</ul>
-</ul></details></li>    <li style='list-style-type: none;'><details><summary>/3-encapsulate</summary>
-
-<ul><ul>      <li><a href="./refactors/simple-javascript-quiz/3-encapsulate/index.html" target="_blank">/index.html</a></li>
-</ul>
-</ul></details></li>    <li style='list-style-type: none;'><details><summary>/4-es-module</summary>
-
-<ul><ul>      <li><a href="./refactors/simple-javascript-quiz/4-es-module/index.html" target="_blank">/index.html</a></li>
-</ul>
-</ul></details></li>    <li style='list-style-type: none;'><details><summary>/5-bind-handler</summary>
-
-<ul><ul>      <li><a href="./refactors/simple-javascript-quiz/5-bind-handler/index.html" target="_blank">/index.html</a></li>
-</ul>
-</ul></details></li>    <li style='list-style-type: none;'><details><summary>/6-classy</summary>
-
-<ul><ul>      <li><a href="./refactors/simple-javascript-quiz/6-classy/index.html" target="_blank">/index.html</a></li>
-</ul>
-</ul></details></li>
-</ul></details></li>
-</ul></details></li><li style='list-style-type: none;'><details><summary>/stepped-and-separated</summary>
+<li style='list-style-type: none;'><details><summary>/stepped-and-separated</summary>
 
 <ul>  <li style='list-style-type: none;'><details><summary>/bound-incrementor-separated</summary>
 
