@@ -6,8 +6,8 @@
   "scripts": {
     "register-isolate": "node isolate/register.js",
     "register-integrate": "node integrate/register.js",
-    "register-code-to-study": "node code-to-study/register.js",
-    "register": "npm run register-isolate && npm run register-integrate && npm run register-code-to-study",
+    "register-example-projects": "node example-projects/register.js",
+    "register": "npm run register-isolate && npm run register-integrate && npm run register-example-projects",
     "start": "npm run register && node server.js"
   },
   "repository": {

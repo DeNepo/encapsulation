@@ -5,17 +5,10 @@ Examples and exercises to study
 <!-- BEGIN TOC -->
 <li style='list-style-type: none;'><details><summary>/01-app-objects</summary>
 
-<ul>  <li style='list-style-type: none;'><details><summary>/examples</summary>
+<ul>  <li style='list-style-type: none;'><details><summary>/refactor-code-along</summary>
 
-<ul><ul>    <li><a href="./01-app-objects/examples/asdf-encpasulated.html" target="_blank">/asdf-encpasulated.html</a></li>
-    <li><a href="./01-app-objects/examples/asdf-separated.html" target="_blank">/asdf-separated.html</a></li>
-</ul>
-</ul></details></li>  <li style='list-style-type: none;'><details><summary>/exercises</summary>
-
-<ul><ul>    <li><a href="./01-app-objects/exercises/asdf-blanks.html" target="_blank">/asdf-blanks.html</a></li>
-    <li><a href="./01-app-objects/exercises/asdf-demo.html" target="_blank">/asdf-demo.html</a></li>
-    <li><a href="./01-app-objects/exercises/zxcv-encapsulated.html" target="_blank">/zxcv-encapsulated.html</a></li>
-    <li><a href="./01-app-objects/exercises/zxcv-separated.html" target="_blank">/zxcv-separated.html</a></li>
+<ul><ul>    <li><a href="./01-app-objects/refactor-code-along/the-average--encapsulated.html" target="_blank">/the-average--encapsulated.html</a></li>
+    <li><a href="./01-app-objects/refactor-code-along/the-average--separated.html" target="_blank">/the-average--separated.html</a></li>
 </ul>
 </ul></details></li>
 </ul></details></li><li style='list-style-type: none;'><details><summary>/02-import-export</summary>
