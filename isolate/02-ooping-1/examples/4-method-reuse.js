@@ -2,7 +2,7 @@
 
 const object = {
   _numbers: [],
-  get numbers() {
+  getNumbers() {
     return this._numbers;
   },
   addNumber(value) {
@@ -12,10 +12,10 @@ const object = {
     return this.getNumbers().filter(value => value % 2 === 0);
   },
   sum() {
-    return this.getNumbers().reduce(sum, 0);
+    return this.getNumbers().reduce((sum, current) => (sum += current), 0);
   },
   sumOfEvenNumbers() {
-    return this.getEvenNumbers().reduce(sum, 0);
+    return this.getEvenNumbers().reduce((sum, current) => (sum += current), 0);
   },
 };
 
