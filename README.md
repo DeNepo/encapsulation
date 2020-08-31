@@ -258,7 +258,7 @@ Screen recordings of class.  Coaches, when sending your PR's with links please .
 
 ---
 
-## Class 7 & 8
+### Class 7 & 8
 
 > [Anthony](https://github.com/Toinne/), [Bram](https://github.com/bramdevries/)
 
@@ -269,3 +269,10 @@ Screen recordings of class.  Coaches, when sending your PR's with links please .
     - Part 1: [binding, and why it matters](https://vimeo.com/401830596)
     - Part 2: [binding handlers](https://vimeo.com/401853625)
 
+### Class 9 & 10
+
+> [Anthony](https://github.com/Toinne/), [Unmesh](https://github.com/unmeshvrije/), [Evan](https://github.com/colevandersWands)
+
+1. Week 1:
+    - Part 1: [`this`](https://vimeo.com/453294595)
+    - Part 2: [OOP Refactor](https://vimeo.com/453294872)

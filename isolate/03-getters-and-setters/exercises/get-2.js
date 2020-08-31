@@ -2,7 +2,9 @@ const obj1 = {
   numbers: [12, 4, 9, 36, 7, 0, -2],
   modulo: 3,
   getZeroRemainders: function () {
-    return this.numbers.filter(x => x % this.modulo === 0);
+    return this.numbers.filter(x => {
+      return x % this.modulo === 0
+    });
   }
 };
 

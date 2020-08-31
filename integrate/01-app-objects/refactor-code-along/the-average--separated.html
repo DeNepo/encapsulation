@@ -25,8 +25,6 @@
 <body>
   <main id='user interface'>
     <button onclick='console.log(log)'>log</button>
-    <br>
-    what happens when you try clicking on a view in the log?
     <hr>
     <form id="add-number-form" action="#">
       <input id='number-input' type='number' value='0'>
@@ -98,14 +96,16 @@
         action: 'add number'
       };
       log.push(logEntry);
+
       const inputEl = document.getElementById('number-input');
       const userInput = Number(inputEl.value);
 
       // log user input
       logEntry.input = userInput;
+
       // update state
       state.numbers.push(userInput);
-      state.average = average(app.state.numbers);
+      state.average = average(state.numbers);
       // log new state
       logEntry.state = deepClone(state);
 
@@ -114,7 +114,7 @@
       // re-render the average
       const averageContainer = document.getElementById('average');
       averageContainer.innerHTML = '';
-      const renderedAverage = renderAverage(app.state.average);
+      const renderedAverage = renderAverage(state.average);
       averageContainer.appendChild(renderedAverage);
       // log new view rendered from state
       logEntry.viewAverage = renderedAverage;
@@ -122,7 +122,7 @@
       // re-render the list of numbers
       const numbersContainer = document.getElementById('numbers-list');
       numbersContainer.innerHTML = '';
-      const renderedList = renderNumberList(app.state.numbers);
+      const renderedList = renderNumberList(state.numbers);
       numbersContainer.appendChild(renderedList);
       // log new view rendered from state
       logEntry.viewNumbers = renderedList;
@@ -145,7 +145,7 @@
       // re-render the average
       const averageContainer = document.getElementById('average');
       averageContainer.innerHTML = '';
-      const renderedAverage = renderAverage(app.state.average);
+      const renderedAverage = renderAverage(state.average);
       averageContainer.appendChild(renderedAverage);
       // log new view rendered from state
       logEntry.viewAverage = renderedAverage;
