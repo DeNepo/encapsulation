@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>fill-in 3: biggest/smallest</title>
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='demo'>
+    const a = ['input', 'createElement', 'form', 'biggest', 'button', 'innerHTML', 'render', 'onclick', 'appendChild', '\x20-->\x20', 'name', 'push', 'number', 'state', 'value', 'div', 'getElementById', 'createTextNode', 'target', 'code', 'biggest/smallest', 'type', 'all', 'smallest']; (function (b, e) { const f = function (g) { while (--g) { b['push'](b['shift']()); } }; f(++e); }(a, 0x91)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; const app = { 'state': { 'biggest': -Infinity, 'smallest': Infinity, 'all': [] }, 'handler': function (c, d, e) { const f = e[b('0x11')][b('0x1')]['newNumber'][b('0xd')], g = Number(f); this['state'][b('0x15')][b('0xa')](g), g > this['state'][b('0x2')] && (this[b('0xc')][b('0x2')] = g, c[b('0x4')] = this[b('0xc')]['biggest']), g < this['state']['smallest'] && (this[b('0xc')][b('0x16')] = g, d[b('0x4')] = this['state'][b('0x16')]); }, 'render': function (c) { const d = document['createElement'](b('0x12')); d[b('0x4')] = this['state'][b('0x2')]; const e = document[b('0x0')](b('0x12')); e[b('0x4')] = this[b('0xc')][b('0x16')]; const f = document[b('0x0')]('p'); f[b('0x7')](e), f[b('0x7')](document[b('0x10')](b('0x8'))), f[b('0x7')](d); const g = document[b('0x0')](b('0x17')); g[b('0x14')] = b('0xb'), g[b('0x9')] = 'newNumber', g[b('0xd')] = '1'; const h = document[b('0x0')]('input'); h[b('0x14')] = b('0x3'), h[b('0xd')] = 'add\x20number', h[b('0x6')] = this['handler']['bind'](this, d, e); const i = document[b('0x0')](b('0x1')); i[b('0x7')](g), i['appendChild'](h); const j = document[b('0x0')](b('0xe')); return j['id'] = c, j[b('0x7')](f), j[b('0x7')](i), j; } }, titleString = b('0x13'), appView = app[b('0x5')](titleString); document[b('0xf')]('root')[b('0x7')](appView);
+  </script>
+
+</body>
+
+</html>

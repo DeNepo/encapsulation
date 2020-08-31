@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>fill-in 3: biggest/smallest</title>
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='app'>
+    const app = {
+      _: {
+        biggest: -Infinity,
+        smallest: Infinity,
+        all: []
+      },
+      _: function (biggestEl, smallestEl, event) {
+        // debugger;
+        const newNumberStr = event.target.form._._;
+        const newNumber = Number(newNumberStr);
+
+        _._._.push(newNumber);
+
+        if (newNumber > this._._) {
+          _._.biggest = newNumber;
+          biggestEl.innerHTML = this._._;
+        }
+        if (newNumber < this._._) {
+          _._.smallest = newNumber;
+          smallestEl.innerHTML = this._._;
+        }
+      },
+      _: function (id) {
+        // debugger;
+        const biggestNumEl = document.createElement('code');
+        biggestNumEl.innerHTML = this.state._;
+
+        const smallestNumEl = document.createElement('code');
+        smallestNumEl.innerHTML = this.state._;
+
+        const rangeEl = document.createElement('p');
+        rangeEl.appendChild(smallestNumEl);
+        rangeEl.appendChild(document.createTextNode(' --> '));
+        rangeEl.appendChild(biggestNumEl);
+
+        const inputEl = document.createElement('input');
+        inputEl.type = 'number';
+        inputEl.name = 'newNumber';
+        inputEl.value = '1';
+
+        const buttonEl = document.createElement('input');
+        buttonEl.type = 'button';
+        buttonEl.value = 'add number';
+        buttonEl.onclick = this.handler.bind(_, _, _);
+
+        const formEl = document.createElement('form');
+        formEl.appendChild(inputEl);
+        formEl.appendChild(buttonEl);
+
+        const container = document.createElement('div');
+        container.id = id;
+        container.appendChild(rangeEl);
+        container.appendChild(formEl);
+
+        return container;
+      },
+    };
+  </script>
+
+  <script id='init'>
+    const titleString = 'biggest/smallest';
+
+    const appView = app.render(titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

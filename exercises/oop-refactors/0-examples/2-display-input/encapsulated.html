@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>example 2: display input</title>
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='object'>
+    const app = {
+      state: {
+        word: ''
+      },
+      handler: function (element, event) {
+        const newWord = event.target.value;
+        this.state.word = newWord;
+        element.innerHTML = this.state.word;
+      },
+      render: function (id) {
+        const outputEl = document.createElement('p');
+        outputEl.innerHTML = this.state.word;
+
+        const inputEl = document.createElement('input');
+        inputEl.type = 'text';
+        inputEl.placeholder = 'type here';
+        inputEl.onkeyup = this.handler.bind(this, outputEl);
+
+        const container = document.createElement('div');
+        container.id = id;
+        container.appendChild(inputEl);
+        container.appendChild(outputEl);
+
+        return container;
+      },
+    }
+  </script>
+
+  <script id='init'>
+    const titleString = 'display input';
+
+    const appView = app.render(titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

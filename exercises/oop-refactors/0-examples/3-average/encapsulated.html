@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>example 3: average</title>
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='object'>
+    const app = {
+      state: {
+        average: 0,
+        sum: 0,
+        howMany: 0
+      },
+      handler: function (element, event) {
+        const newNumberStr = event.target.form.newNumber.value;
+        const newNumber = Number(newNumberStr);
+        this.state.sum += newNumber;
+        this.state.howMany += 1;
+        this.state.average = this.state.sum / this.state.howMany;
+        element.innerHTML = this.state.average;
+      },
+      render: function (id) {
+        const outputEl = document.createElement('p');
+        outputEl.innerHTML = this.state.average;
+
+        const inputEl = document.createElement('input');
+        inputEl.type = 'number';
+        inputEl.name = 'newNumber';
+        inputEl.value = '1';
+
+        const buttonEl = document.createElement('input');
+        buttonEl.type = 'button';
+        buttonEl.value = 'include in average';
+        buttonEl.onclick = this.handler.bind(this, outputEl);
+
+        const formEl = document.createElement('form');
+        formEl.appendChild(inputEl);
+        formEl.appendChild(buttonEl);
+
+        const container = document.createElement('div');
+        container.id = id;
+        container.appendChild(formEl);
+        container.appendChild(outputEl);
+
+        return container;
+      },
+    }
+
+  </script>
+
+  <script id='init'>
+    const titleString = 'average';
+
+    const appView = app.render(titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

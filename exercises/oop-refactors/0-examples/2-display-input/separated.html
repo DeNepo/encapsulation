@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>example 2: display input</title>
+
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='data'>
+    const state = {
+      word: ''
+    };
+  </script>
+
+  <script id='handler'>
+    const handler = (event) => {
+      const newWord = event.target.value;
+      state.word = newWord;
+      document.getElementById('output-element')
+        .innerHTML = state.word;
+    };
+  </script>
+
+  <script id='view'>
+    const render = (data, handler, id) => {
+
+      const outputEl = document.createElement('p');
+      outputEl.id = 'output-element';
+      outputEl.innerHTML = data.word;
+
+      const inputEl = document.createElement('input');
+      inputEl.type = 'text';
+      inputEl.placeholder = 'type here';
+      inputEl.onkeyup = handler;
+
+      const container = document.createElement('div');
+      container.id = id;
+      container.appendChild(inputEl);
+      container.appendChild(outputEl);
+
+      return container;
+    }
+  </script>
+
+  <script id='init'>
+    const titleString = 'display input';
+
+    const appView = render(state, handler, titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

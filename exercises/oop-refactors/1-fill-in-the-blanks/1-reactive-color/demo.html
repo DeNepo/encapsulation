@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>fill-in 1: reactive color</title>
+
+  <style>
+    .full-screen {
+      height: 100vh;
+      width: 100vw;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='demo'>
+    const a = ['innerHeight', 'innerWidth', 'appendChild', 'red', 'blue', 'root', 'style', 'getElementById', 'backgroundColor', 'onmousemove', 'bind', 'mouse\x20coordinates', 'state', 'createElement', 'render', 'handler', 'div']; (function (b, e) { const f = function (g) { while (--g) { b['push'](b['shift']()); } }; f(++e); }(a, 0x1a3)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; const app = { 'state': { 'red': 0x0, 'blue': 0x0 }, 'handler': function (c, d) { const e = Number(d['x']), f = Number(d['y']); this[b('0x1')][b('0x9')] = e / window[b('0x7')] * 0xff, this[b('0x1')][b('0xa')] = f / window[b('0x6')] * 0xff, c[b('0xc')][b('0xe')] = 'rgb(' + this[b('0x1')]['red'] + ',\x200,\x20' + this[b('0x1')]['blue'] + ')'; }, 'render': function (c) { const d = document[b('0x2')](b('0x5')); return d['id'] = c, d[b('0xf')] = this[b('0x4')][b('0x10')](this, d), d['className'] = 'full-screen', d; } }, titleString = b('0x0'), appView = app[b('0x3')](titleString); document[b('0xd')](b('0xb'))[b('0x8')](appView);
+  </script>
+
+</body>
+
+</html>

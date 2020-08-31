@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>refactor 1: mouse coordinates</title>
+
+  <style>
+    .full-screen {
+      height: 100vh;
+      width: 100vw;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='data'>
+    const state = {
+      x: 0,
+      y: 0
+    };
+  </script>
+
+  <script id='handler'>
+    const handler = (event) => {
+      state.x = Number(event.x);
+      state.y = Number(event.y);
+      document.getElementById('output-element')
+        .innerHTML = renderState(state);
+    };
+  </script>
+
+  <script id='views'>
+    const renderState = (data) => {
+      return `X: ${data.x}, Y: ${data.y}`;
+    };
+
+    const render = (data, handler, id, renderData) => {
+
+      const container = document.createElement('div');
+      container.className = 'full-screen';
+      container.id = id;
+
+      const outputEl = document.createElement('p');
+      outputEl.innerHTML = renderData(data);
+      outputEl.id = 'output-element';
+      container.appendChild(outputEl);
+      container.onmousemove = handler;
+
+      return container;
+    }
+  </script>
+
+  <script id='init'>
+    const titleString = 'mouse coordinates';
+
+    const appView = render(state, handler, titleString, renderState);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

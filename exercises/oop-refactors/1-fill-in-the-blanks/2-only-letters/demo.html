@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>fill-in 2: only letters</title>
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='demo'>
+    const a = ['appendChild', 'render', 'div', 'text', 'root', 'value', 'only\x20letters', 'bind', 'state', 'target', 'input', 'createElement', 'type', 'keepLetters', 'word', 'getElementById', 'replace']; (function (b, e) { const f = function (g) { while (--g) { b['push'](b['shift']()); } }; f(++e); }(a, 0xc0)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; const app = { 'state': { 'word': '' }, 'keepLetters': function () { this[b('0x3')][b('0x9')] = this[b('0x3')][b('0x9')][b('0xb')](/[^a-zA-Z]/gi, ''); }, 'handler': function (c, d) { const e = d[b('0x4')][b('0x0')]; this[b('0x3')][b('0x9')] = e, this[b('0x8')](), c['innerHTML'] = this['state'][b('0x9')]; }, 'render': function (c) { const d = document['createElement']('p'); d['innerHTML'] = this[b('0x3')][b('0x9')]; const e = document[b('0x6')](b('0x5')); e[b('0x7')] = b('0xf'), e['placeholder'] = 'type\x20here', e['onkeyup'] = this['handler'][b('0x2')](this, d); const f = document[b('0x6')](b('0xe')); return f['id'] = c, f[b('0xc')](e), f[b('0xc')](d), f; } }, titleString = b('0x1'), appView = app[b('0xd')](titleString); document[b('0xa')](b('0x10'))[b('0xc')](appView);
+  </script>
+
+</body>
+
+</html>

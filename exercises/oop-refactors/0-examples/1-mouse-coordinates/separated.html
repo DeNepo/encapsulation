@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>example 1: mouse coordinates</title>
+
+  <style>
+    .full-screen {
+      height: 100vh;
+      width: 100vw;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='data'>
+    const state = {
+      x: 0,
+      y: 0
+    };
+  </script>
+
+  <script id='handler'>
+    const handler = (event) => {
+
+      state.x = Number(event.x);
+      state.y = Number(event.y);
+      event.target.innerHTML = `${state.x}, ${state.y}`;
+    };
+  </script>
+
+  <script id='view'>
+    const render = (data, handler, id) => {
+
+      const container = document.createElement('div');
+      container.id = id;
+      container.innerHTML = `${data.x}, ${data.y}`;
+
+      container.onmousemove = handler;
+      container.className = 'full-screen';
+
+      return container;
+    }
+  </script>
+
+  <script id='init'>
+    const titleString = 'mouse coordinates';
+
+    const appView = render(state, handler, titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

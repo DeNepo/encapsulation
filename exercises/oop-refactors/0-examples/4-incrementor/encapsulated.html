@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>example 4: incrementor</title>
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='object'>
+    const app = {
+      state: {
+        current: 0,
+        past: []
+      },
+      handler: function (display, event) {
+
+        const newCurrentStr = event.target.form.increment.value;
+        const newCurrent = Number(newCurrentStr);
+
+        this.state.past.push(this.state.current);
+        this.state.current += newCurrent;
+
+        display.innerHTML = this.state.current;
+
+      },
+      render: function (id) {
+
+        const displayEl = document.createElement('p');
+        displayEl.innerHTML = this.state.current;
+
+        const buttonEl = document.createElement('input');
+        buttonEl.type = 'button';
+        buttonEl.value = 'increment by: ';
+        buttonEl.onclick = this.handler.bind(this, displayEl);
+
+        const inputEl = document.createElement('input');
+        inputEl.type = 'number';
+        inputEl.name = 'increment';
+        inputEl.value = '1';
+
+        const formEl = document.createElement('form');
+        formEl.appendChild(buttonEl);
+        formEl.appendChild(inputEl);
+
+        const container = document.createElement('div');
+        container.id = id;
+        container.className = 'exercise';
+        container.appendChild(formEl);
+        container.appendChild(displayEl);
+
+        return container;
+      },
+    }
+
+  </script>
+
+  <script id='init'>
+    const titleString = 'incrementor';
+
+    const appView = app.render(titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

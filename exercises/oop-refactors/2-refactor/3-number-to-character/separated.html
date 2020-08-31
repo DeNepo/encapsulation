@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>refactor 2: reactive modulo</title>
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='data'>
+    const state = {
+      charCode: 0
+    };
+  </script>
+
+
+  <script id='handler'>
+    const handler = (event) => {
+
+      const inputNumber = Number(event.target.value);
+      state.charCode = ((inputNumber % 256) + 256) % 256;
+
+      const charFromCode = String.fromCharCode(state.charCode)
+
+      document.getElementById('output-element')
+        .innerHTML = charFromCode;
+    };
+  </script>
+
+  <script id='views'>
+    const render = (data, handler, id) => {
+
+      const outputEl = document.createElement('code');
+      outputEl.style.marginLeft = '8%';
+      outputEl.id = 'output-element';
+
+      const inputEl = document.createElement('input');
+      inputEl.type = 'number';
+      inputEl.value = '0';
+      inputEl.onchange = handler;
+
+      const container = document.createElement('div');
+      container.id = id;
+      container.appendChild(inputEl);
+      container.appendChild(outputEl);
+
+      return container;
+    }
+  </script>
+
+  <script id='init'>
+    const titleString = 'reactive modulo';
+
+    const appView = render(state, handler, titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

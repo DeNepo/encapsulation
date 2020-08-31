@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>fill-in 5: only reverse letters</title>
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='app'>
+    const app = {
+      state: {
+        word: ''
+      },
+      get _() { return this._._ },
+      set _(newOne) { this._._ = newOne },
+      _: function () {
+        this.word = this.word
+          .split('').reverse().join('');
+      },
+      _: function () {
+        this.word = this.word._(/[^a-zA-Z]/gi, '');
+      },
+      handler: function (_, _) {
+        // debugger;
+        const newWord = event.target.value;
+        this.word = newWord;
+
+        this.keepLetters();
+        this.reverseWord();
+
+        element.innerHTML = _.word;
+      },
+      render: function (id) {
+        // debugger;
+        const outputEl = document.createElement('p');
+        outputEl.innerHTML = _.word;
+
+        const inputEl = document.createElement('input');
+        inputEl.type = 'text';
+        inputEl.placeholder = '_';
+        inputEl.onkeyup = _._._(_, _);
+
+        const container = document.createElement('div');
+        container.id = id;
+        container.appendChild(inputEl);
+        container.appendChild(outputEl);
+
+        return container;
+      },
+    }
+  </script>
+
+  <script id='tests'>
+    const assert = (assertion, message) => {
+      if (assertion) {
+        console.log('%cPASS: ' + message, 'color:green');
+      } else {
+        console.log('%cFAIL: ' + message, 'color:red');
+      }
+    };
+
+    assert(app.word === '', 'Test 0');
+
+    app.word = 'asdf';
+    app.reverseWord();
+    assert(app.word === 'fdsa', 'Test 1 - reverseWord');
+
+    app.word = 'abcdefghijklmnopqrstuvwxyz';
+    app.reverseWord();
+    assert(app.word === 'zyxwvutsrqponmlkjihgfedcba', 'Test 2 - reverseWord');
+
+    app.word = '--987--|';
+    app.reverseWord();
+    assert(app.word === '|--789--', 'Test 3 - reverseWord');
+
+    app.word = 'asdf';
+    app.keepLetters();
+    assert(app.word === 'asdf', 'Test 4 - keepLetters');
+
+    app.word = '1@2-5+6';
+    app.keepLetters();
+    assert(app.word === '', 'Test 5 - keepLetters');
+
+    app.word = 'a_0sd`f';
+    app.keepLetters();
+    assert(app.word === 'asdf', 'Test 6 - keepLetters');
+
+    app.word = '';
+    assert(app.word === '', 'Test 7');
+  </script>
+
+  <script id='init'>
+    const titleString = 'only reverse letters';
+
+    const appView = app.render(titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>fill-in 4: key/value entries</title>
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='app'>
+    const app = {
+      state: {},
+      set: function (key, value) {
+        this._[_] = _;
+      },
+      remove: function (key) {
+        delete _._[_];
+      },
+      renderState: function () {
+        const liElements = Object.keys(this.state)
+          .map(key => `\n <li><code>${key}: ${this.state[key]}</code></li>`)
+          .reduce((allLis, liStr) => allLis + liStr, '');
+        return '<ul>' + liElements + '\n</ul>';
+      },
+      handler: function (_, _) {
+        // debugger;
+        const action = event.target.value;
+        const key = event.target.form.keyInput.value;
+        const value = event.target.form.valueInput.value;
+
+        if (action === 'set key') {
+          this.set(key, value);
+        } else if (action === 'remove key') {
+          this.remove(key);
+        };
+
+        display.innerHTML = this.renderState();
+      },
+      render: function (id) {
+        // debugger;
+        const displayEl = document.createElement('p');
+        displayEl.innerHTML = this._();
+
+        const keyInputEl = document.createElement('input');
+        keyInputEl.type = 'text';
+        keyInputEl.name = '_';
+        keyInputEl.placeholder = 'key';
+
+        const valueInputEl = document.createElement('input');
+        valueInputEl.type = 'text';
+        valueInputEl.name = '_';
+        valueInputEl.placeholder = 'value';
+
+        const setButtonEl = document.createElement('input');
+        setButtonEl.type = 'button';
+        setButtonEl.value = '_';
+        setButtonEl.onclick = _._._(_, _);
+
+        const removeButtonEl = document.createElement('input');
+        removeButtonEl.type = 'button';
+        removeButtonEl.value = '_';
+        removeButtonEl.onclick = _._._(_, _);
+
+        const formEl = document.createElement('form');
+        formEl.appendChild(keyInputEl);
+        formEl.appendChild(valueInputEl);
+        formEl.appendChild(document.createElement('br'));
+        formEl.appendChild(setButtonEl);
+        formEl.appendChild(removeButtonEl);
+
+        const container = document.createElement('div');
+        container.id = id;
+        container.appendChild(formEl);
+        container.appendChild(displayEl);
+
+        return container;
+      },
+    }
+  </script>
+
+  <script id='tests'>
+    const assert = (assertion, message) => {
+      if (assertion) {
+        console.log('%cPASS: ' + message, 'color:green');
+      } else {
+        console.log('%cFAIL: ' + message, 'color:red');
+      }
+    };
+
+    assert(JSON.stringify(app.state) === '{}', 'Test 0');
+
+    app.set('a', 'x');
+    assert(JSON.stringify(app.state) === '{"a":"x"}', 'Test 2 - app.set');
+
+    app.set('b', 'y');
+    assert(JSON.stringify(app.state) === '{"a":"x","b":"y"}', 'Test 2 - app.set');
+
+    app.set('a', 'z');
+    assert(JSON.stringify(app.state) === '{"a":"z","b":"y"}', 'Test 3 - app.set');
+
+    app.remove('a');
+    assert(JSON.stringify(app.state) === '{"b":"y"}', 'Test 4 - app.remove');
+
+    app.remove('b');
+    assert(JSON.stringify(app.state) === '{}', 'Test 5 - app.remove');
+
+    app.remove('a');
+    assert(JSON.stringify(app.state) === '{}', 'Test 6 - app.remove');
+
+    app.state = {};
+    assert(JSON.stringify(app.state) === '{}', 'Test 7');
+  </script>
+
+  <script id='init'>
+    const titleString = 'key/value entries';
+
+    const appView = app.render(titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

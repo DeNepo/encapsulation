@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>refactor 2: reactive modulo</title>
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='object'>
+
+    const app = {
+      state: {
+
+      },
+      updateState: function (num, mod) {
+
+      },
+      handler: function (output, event) {
+        // read input from user
+
+        // update state
+        this.updateState(newNum, newMod);
+
+        // render state to the UI
+
+      },
+      render: function (id) {
+
+      },
+    }
+  </script>
+
+  <script id='tests'>
+    const assert = (assertion, message) => {
+      if (assertion) {
+        console.log('%cPASS: ' + message, 'color:green');
+      } else {
+        console.log('%cFAIL: ' + message, 'color:red');
+      }
+    };
+
+    assert(JSON.stringify(app.state) === '{"number":3,"modulo":2,"result":1}', 'Test 0');
+
+    app.updateState(3, 2);
+    assert(JSON.stringify(app.state) === '{"number":3,"modulo":2,"result":1}', 'Test 1');
+
+    app.updateState(2, 3);
+    assert(JSON.stringify(app.state) === '{"number":2,"modulo":3,"result":2}', 'Test 2');
+
+    app.updateState(-1, 1);
+    assert(JSON.stringify(app.state) === '{"number":-1,"modulo":1,"result":0}', 'Test 3');
+
+    app.updateState(12, 4);
+    assert(JSON.stringify(app.state) === '{"number":12,"modulo":4,"result":0}', 'Test 4');
+
+    app.updateState(8, -5);
+    assert(JSON.stringify(app.state) === '{"number":8,"modulo":-5,"result":3}', 'Test 5');
+
+    app.state = {
+      number: 3,
+      modulo: 2,
+      result: 1
+    };
+    assert(JSON.stringify(app.state) === '{"number":3,"modulo":2,"result":1}', 'Test 6');
+  </script>
+
+  <script id='init'>
+    const titleString = 'reactive modulo';
+
+    const appView = app.render(titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>refactor 2: reactive modulo</title>
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='object'>
+    const app = {
+      state: {
+        charCode: 0
+      },
+      set code(newNum) {
+
+      },
+      get char() {
+
+      },
+      handler: function (display, event) {
+
+      },
+      render: function (id) {
+
+      },
+    }
+
+  </script>
+
+  <script id='tests'>
+    const assert = (assertion, message) => {
+      if (assertion) {
+        console.log('%cPASS: ' + message, 'color:green');
+      } else {
+        console.log('%cFAIL: ' + message, 'color:red');
+      }
+    };
+
+    assert(JSON.stringify(app.state) === '{"charCode":0}', 'Test 1 - initial state');
+
+    app.code = 1;
+    assert(JSON.stringify(app.state) === '{"charCode":1}', 'Test 2 - set code');
+
+    const char3 = app.char;
+    assert(char3 === '', 'Test 3 a - get char');
+    assert(JSON.stringify(app.state) === '{"charCode":1}', 'Test 3 b - check for side-effects');
+
+    app.code = -1;
+    assert(JSON.stringify(app.state) === '{"charCode":255}', 'Test 4 - set code');
+
+    const char5 = app.char;
+    assert(char5 === 'ÿ', 'Test 5 a - get char');
+    assert(JSON.stringify(app.state) === '{"charCode":255}', 'Test 5 b - check for side-effects');
+
+    app.code = 111;
+    assert(JSON.stringify(app.state) === '{"charCode":111}', 'Test 6 - set code');
+
+    const char7 = app.char;
+    assert(char7 === 'o', 'Test 7 a - get char');
+    assert(JSON.stringify(app.state) === '{"charCode":111}', 'Test 7 b - check for side-effects');
+
+    app.code = -145;
+    assert(JSON.stringify(app.state) === '{"charCode":111}', 'Test 8 - set code');
+
+    const char9 = app.char;
+    assert(char9 === 'o', 'Test 9 a - get char');
+    assert(JSON.stringify(app.state) === '{"charCode":111}', 'Test 9 b - check for side-effects');
+
+    app.code = 0;
+    assert(JSON.stringify(app.state) === '{"charCode":0}', 'Test 10 - set char');
+  </script>
+
+  <script id='init'>
+    const titleString = 'reactive modulo';
+
+    const appView = app.render(titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

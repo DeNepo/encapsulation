@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>fill-in 2: only letters</title>
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='app'>
+    const app = {
+      state: {
+        word: ''
+      },
+      keepLetters: function () {
+        _._._ = _._._.replace(/[^a-zA-Z]/gi, '');
+      },
+      handler: function (_, _) {
+        // debugger;
+        const newWord = _.target.value;
+        this._._ = newWord;
+        this.keepLetters();
+        element.innerHTML = _._.word;
+      },
+      render: function (id) {
+        // debugger;
+        const outputEl = document.createElement('p');
+        outputEl.innerHTML = _.state._;
+
+        const inputEl = document.createElement('input');
+        inputEl.type = 'text';
+        inputEl.placeholder = 'type here';
+        inputEl.onkeyup = this.handler._(_, _);
+
+        const container = document.createElement('div');
+        container.id = id;
+        container.appendChild(_);
+        container.appendChild(_);
+
+        return container;
+      },
+    }
+  </script>
+
+  <script id='tests'>
+    const assert = (assertion, message) => {
+      if (assertion) {
+        console.log('%cPASS: ' + message, 'color:green');
+      } else {
+        console.log('%cFAIL: ' + message, 'color:red');
+      }
+    };
+
+    assert(app.state.word === '', 'Test 0');
+
+    app.state.word = 'asdf';
+    app.keepLetters();
+    assert(app.state.word === 'asdf', 'Test 1');
+
+    app.state.word = '1@2-5+6';
+    app.keepLetters();
+    assert(app.state.word === '', 'Test 2');
+
+    app.state.word = 'a_s0d`f';
+    app.keepLetters();
+    assert(app.state.word === 'asdf', 'Test 3');
+
+    app.state.word = '';
+    assert(app.state.word === '', 'Test 4');
+  </script>
+
+  <script id='init'>
+    const titleString = 'only letters';
+
+    const appView = app.render(titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

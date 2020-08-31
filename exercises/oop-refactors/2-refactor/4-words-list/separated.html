@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>example 5: words list</title>
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='data'>
+    const state = {
+      words: []
+    };
+  </script>
+
+  <script id='logic'>
+    const removeWord = (arrOfWords, toRemove) => {
+      return arrOfWords.filter(word => word !== toRemove);
+    };
+
+    const assert = (assertion, message) => {
+      if (assertion) {
+        console.log('%cPASS: ' + message, 'color:green');
+      } else {
+        console.log('%cFAIL: ' + message, 'color:red');
+      }
+    };
+
+    const test1 = removeWord(['a', 'b', 'c'], 'a');
+    assert(test1.toString() === 'b,c', 'Test 1');
+
+    const test2 = removeWord(['a', 'b', 'c'], 'd');
+    assert(test2.toString() === 'a,b,c', 'Test 2');
+
+    const test3 = removeWord(['a', 'b', 'c', 'a'], 'a');
+    assert(test3.toString() === 'b,c', 'Test 3');
+
+    const test4 = removeWord([], 'a');
+    assert(test4.toString() === '', 'Test 4');
+  </script>
+
+  <script id='handler'>
+    const handler = (event) => {
+      const word = event.target.form.word.value;
+      const action = event.target.value;
+      if (action === 'add') {
+        state.words.push(word);
+      }
+      else if (action === 'remove') {
+        state.words = removeWord(state.words, word);
+      }
+      const newList = renderList(state.words);
+      const displayEl = document.getElementById('display-element');
+      displayEl.innerHTML = '';
+      displayEl.appendChild(newList);
+    };
+  </script>
+
+  <script id='views'>
+    const renderList = (arr) => {
+      return arr
+        .map(word => {
+          const li = document.createElement('li');
+          li.innerHTML = word;
+          return li;
+        })
+        .reduce((list, word) => {
+          list.appendChild(word);
+          return list;
+        }, document.createElement('ul'));
+    };
+
+    const render = (data, handler, id) => {
+      const displayEl = document.createElement('div');
+      displayEl.id = 'display-element';
+      const wordsList = renderList(state.words);
+      displayEl.appendChild(wordsList);
+
+      const inputEl = document.createElement('input');
+      inputEl.type = 'text';
+      inputEl.name = 'word';
+      inputEl.placeholder = 'type a thing';
+
+      const addButtonEl = document.createElement('input');
+      addButtonEl.type = 'button';
+      addButtonEl.value = 'add';
+      addButtonEl.onclick = handler;
+
+      const removeButtonEl = document.createElement('input');
+      removeButtonEl.type = 'button';
+      removeButtonEl.value = 'remove';
+      removeButtonEl.onclick = handler;
+
+      const formEl = document.createElement('form');
+      formEl.appendChild(inputEl);
+      formEl.appendChild(addButtonEl);
+      formEl.appendChild(removeButtonEl);
+
+      const container = document.createElement('div');
+      container.id = id;
+      container.className = 'exercise';
+      container.appendChild(formEl);
+      container.appendChild(displayEl);
+
+      return container;
+    }
+  </script>
+
+  <script id='init'>
+    const titleString = 'words list';
+
+    const appView = render(state, handler, titleString);
+
+    document.getElementById('root')
+      .appendChild(appView);
+  </script>
+
+</body>
+
+</html>

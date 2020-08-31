@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>fill-in 4: key/value entries</title>
+
+</head>
+
+<body>
+
+  <section id='root'></section>
+
+  <script id='demo'>
+    const a = ['</code></li>', 'createElement', 'innerHTML', 'input', 'getElementById', 'form', 'key/value entries', '<ul>', 'onclick', '\x0a</ul>', 'name', 'state', 'div', 'valueInput', 'set', 'set\x20key', 'text', 'keys', 'key', 'map', 'render', 'appendChild', 'button', 'reduce', 'type', 'root', 'target', 'remove', 'renderState', 'bind', 'handler', 'placeholder', 'value', 'keyInput', 'remove\x20key']; (function (b, e) { const f = function (g) { while (--g) { b['push'](b['shift']()); } }; f(++e); }(a, 0xfe)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; const app = { 'state': {}, 'set': function (c, d) { this[b('0x2')][c] = d; }, 'remove': function (c) { delete this[b('0x2')][c]; }, 'renderState': function () { const c = Object[b('0x8')](this['state'])[b('0xa')](d => '\x0a\x20<li><code>' + d + ':\x20' + this[b('0x2')][d] + b('0x1a'))[b('0xe')]((d, e) => d + e, ''); return b('0x21') + c + b('0x0'); }, 'handler': function (c, d) { const e = d[b('0x11')][b('0x17')], f = d[b('0x11')][b('0x1f')][b('0x18')][b('0x17')], g = d[b('0x11')][b('0x1f')][b('0x4')][b('0x17')]; if (e === 'set\x20key') this[b('0x5')](f, g); else e === b('0x19') && this[b('0x12')](f);; c[b('0x1c')] = this[b('0x13')](); }, 'render': function (c) { const d = document[b('0x1b')]('p'); d[b('0x1c')] = this['renderState'](); const e = document[b('0x1b')](b('0x1d')); e['type'] = 'text', e[b('0x1')] = b('0x18'), e[b('0x16')] = b('0x9'); const f = document[b('0x1b')](b('0x1d')); f[b('0xf')] = b('0x7'), f['name'] = b('0x4'), f[b('0x16')] = b('0x17'); const g = document[b('0x1b')](b('0x1d')); g[b('0xf')] = b('0xd'), g['value'] = b('0x6'), g[b('0x22')] = this['handler'][b('0x14')](this, d); const h = document[b('0x1b')]('input'); h[b('0xf')] = b('0xd'), h[b('0x17')] = b('0x19'), h[b('0x22')] = this[b('0x15')][b('0x14')](this, d); const i = document['createElement'](b('0x1f')); i['appendChild'](e), i[b('0xc')](f), i[b('0xc')](document['createElement']('br')), i[b('0xc')](g), i[b('0xc')](h); const j = document['createElement'](b('0x3')); return j['id'] = c, j[b('0xc')](i), j['appendChild'](d), j; } }, titleString = b('0x20'), appView = app[b('0xb')](titleString); document[b('0x1e')](b('0x10'))[b('0xc')](appView);
+  </script>
+
+</body>
+
+</html>
