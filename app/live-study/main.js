@@ -62,7 +62,7 @@ export default class LiveStudy {
         exerciseEl.onclick = () => {
           history.replaceState(null, "", `?path=${encodeURIComponent(exercise.path.abs)}`);
           document.getElementById('current-path').innerHTML = exercise.path.abs;
-          editor.setModel(exercise.monacoModel);
+          this.editor.setModel(exercise.monacoModel);
 
           if (exercise.code === null) {
             exercise.load((err, code) => {
@@ -86,7 +86,7 @@ export default class LiveStudy {
         loadChangesEl.onclick = () => {
           exercise.load((err, code) => {
             exercise.monacoModel.setValue(code);
-            editor.setModel(exercise.monacoModel);
+            this.editor.setModel(exercise.monacoModel);
             this.renderStudyButtons(exercise);
             if (exercise.language === 'html') {
               document.getElementById('output').src = "data:text/html;charset=utf-8," + encodeURIComponent(code);
@@ -144,115 +144,8 @@ export default class LiveStudy {
 
     const formatButton = document.createElement('button');
     formatButton.innerHTML = 'format code';
-    formatButton.onclick = () => editor.trigger('anyString', 'editor.action.formatDocument');
+    formatButton.onclick = () => this.editor.trigger('anyString', 'editor.action.formatDocument');
     container.appendChild(formatButton);
-
-
-    // const flowchartDiv = document.createElement('div');
-    // flowchartDiv.style = 'display: inline;';
-    // const flowchartCheckbox = document.createElement('input');
-    // flowchartCheckbox.type = 'checkbox';
-    // flowchartDiv.appendChild(flowchartCheckbox);
-    // flowchartDiv.appendChild(document.createTextNode('flowchart'));
-    // let broken = false;
-    // flowchartDiv.onclick = async () => {
-    //   if (broken) { return; }
-    //   try {
-    //     js2flowchart.convertCodeToSvg('');
-    //   } catch (_) {
-    //     const defineTemp = define;
-    //     define = undefined;
-    //     try {
-    //       const res = await fetch('../app/lib/js2flowchart.js');
-    //       const src = await res.text();
-    //       eval(src)
-    //     } catch (err) {
-    //       broken = true;
-    //     }
-    //     define = defineTemp;
-    //   }
-    //   flowchartCheckbox.checked = flowchartCheckbox.checked
-    //     ? false : true;
-    //   const editorDiv = document.getElementById('container');
-    //   const vizDiv = document.getElementById('viz');
-    //   if (flowchartCheckbox.checked) {
-    //     editorDiv.style.width = '50%';
-    //     vizDiv.style.display = 'block';
-    //     renderSVG();
-    //   } else {
-    //     editorDiv.style.width = '100%';
-    //     vizDiv.style.display = 'none';
-    //   }
-    // };
-    // flowchartCheckbox.onclick = flowchartDiv.onclick;
-    // container.appendChild(flowchartDiv);
-
-    // const renderSVG = debounce(() => {
-    //   const code = getSelection();
-    //   const deCommented = strip(code);
-
-    //   // https://stackoverflow.com/a/58770287
-    //   //   // 1) replace "/" in quotes with non-printable ASCII '\1' char
-    //   //   .replace(/("([^\\"]|\\")*")|('([^\\']|\\')*')/g, (m) => m.replace(/\//g, '{~=|=~}'))
-    //   //   // 2) clear comments
-    //   //   .replace(/(\/\*[^*]+\*\/)|(\/\/[^\n]+)/g, '')
-    //   //   // 3) restore "/" in quotes
-    //   //   .replace(/{~=|=~}/g, '/');
-    //   try {
-    //     const nativeConsoleError = console.error;
-    //     console.error = () => { };
-    //     const svgEl = js2flowchart.convertCodeToSvg(deCommented);
-    //     console.error = nativeConsoleError;
-    //     document.getElementById('viz').innerHTML = svgEl;
-    //   } catch (e) {
-    //     if (e.message.includes("read property 'file' of undefined")) {
-    //       document.getElementById('viz').innerHTML = 'unknown syntax error';
-    //     } else {
-    //       document.getElementById('viz').innerHTML = e.name + ': ' + e.message;
-    //     }
-    //   }
-    // }, 200);
-
-    // editor.onKeyUp((e) => {
-    //   if (flowchartCheckbox.checked) {
-    //     renderSVG();
-    //   }
-    // });
-    // editor.onDidChangeCursorSelection((e) => {
-    //   if (flowchartCheckbox.checked) {
-    //     renderSVG();
-    //   };
-    // });
-
-    // const getSelection = () => {
-    //   const editorSelection = editor.getSelection();
-    //   const editorSelectionEntries = Object.entries(editorSelection);
-    //   const columnEntries = [];
-    //   const lineEntries = [];
-    //   for (const entry of editorSelectionEntries) {
-    //     if (entry[0].includes('Column')) {
-    //       columnEntries.push(entry);
-    //     } else {
-    //       lineEntries.push(entry);
-    //     }
-    //   }
-    //   const firstLine = lineEntries[0][1];
-    //   const firstColum = columnEntries[0][1];
-    //   const noSelection = columnEntries.every((entry) => entry[1] === firstColum)
-    //     && lineEntries.every((entry) => entry[1] === firstLine);
-    //   let selection = '';
-    //   if (noSelection) {
-    //     selection = editor.getValue();
-    //   } else {
-    //     const start = editorSelection.startLineNumber;
-    //     const end = editorSelection.endLineNumber;
-    //     for (let i = start; i <= end; i++) {
-    //       selection += editor.getModel().getLineContent(i) + '\n';
-    //     }
-    //   }
-    //   return selection;
-    // }
-
 
 
     const permalinkButton = document.createElement('button');
