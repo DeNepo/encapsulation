@@ -234,6 +234,37 @@
     },
     {
       "path": "/07-prototypical-inheritance",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/readme.js"
+            },
+            {
+              "path": "/01-prototype-chain.js"
+            },
+            {
+              "path": "/02-instance-vs-static.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/static-or-instance-1.js"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "buttons": []
+      }
+    },
+    {
+      "path": "/08-object-create",
       "files": [
         {
           "path": "/transcribing.js"

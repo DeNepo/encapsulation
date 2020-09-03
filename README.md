@@ -104,7 +104,6 @@ In this module you'll learn how to:
 
 - [Isolate](./isolate/index.html)
 - [Integrate](./integrate/README.md)
-- [OOP Refactors](./exercises/oop-refactors/README.md) (binding handlers)
 
 ### Code to Study
 
@@ -183,18 +182,26 @@ You don't find a todo app so interesting?  not a problem!  Your group is free to
 
 ## Week 2
 
-Learn to _bind_ `this` to your app's event handlers
+Learn to:
+
+- inspect prototype chains in the debugger
+- tell the difference between _static_ and _instance_ methods
+- use `Object.create` for code reuse
 
 ### Prep Work
 
 > before class
 
-- FunFunFunction
-  - [Prototypes in JavaScript](https://www.youtube.com/watch?v=riDVvXZ_Kb4)
-  - [Prototype Basics](https://www.youtube.com/watch?v=YkoelSTUy7A&list=PL0zVEGEvSaeHBZFy6Q8731rcwk0Gtuxub&index=3)
-  - [`Object.create()`](https://www.youtube.com/watch?v=CDFN1VatiJA)
-- [`Object.create()` (Griffith)](https://www.youtube.com/watch?v=qqyZn8X9M3I)
-- [`Object.create()` (WebTunings)](https://www.youtube.com/watch?v=4MUgn3XeOZM)
+- Prototypical Inheritance
+  - [Just JavaScript](https://github.com/HackYourFutureBelgium/just-javascript/tree/master/09-prototypes)
+  - [prototype chain diagram](./diagrams/prototype-chain.jpeg)
+- `Object.create()`
+  - FunFunFunction: [Prototypes in JavaScript](https://www.youtube.com/watch?v=riDVvXZ_Kb4), [Prototype Basics](https://www.youtube.com/watch?v=YkoelSTUy7A&list=PL0zVEGEvSaeHBZFy6Q8731rcwk0Gtuxub&index=3),[`Object.create()`](https://www.youtube.com/watch?v=CDFN1VatiJA)
+  - [Griffith](https://www.youtube.com/watch?v=qqyZn8X9M3I)
+  - [WebTunings](https://www.youtube.com/watch?v=4MUgn3XeOZM)
+  - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+- Code to Study:
+  - [Cycler Refactor](./example-projects/refactors/cycler) through `5-create-many.html`
 
 ### Lesson Plan
 

@@ -3,7 +3,18 @@
 <!-- BEGIN TOC -->
 <li style='list-style-type: none;'><details><summary>/refactors</summary>
 
-<ul>  <li style='list-style-type: none;'><details><summary>/simple-javascript-quiz</summary>
+<ul>  <li style='list-style-type: none;'><details><summary>/cycler</summary>
+
+<ul><ul>    <li><a href="./refactors/cycler/0-script.html" target="_blank">/0-script.html</a></li>
+    <li><a href="./refactors/cycler/1-separated.html" target="_blank">/1-separated.html</a></li>
+    <li><a href="./refactors/cycler/2-encapsulate.html" target="_blank">/2-encapsulate.html</a></li>
+    <li><a href="./refactors/cycler/3-bind-handlers.html" target="_blank">/3-bind-handlers.html</a></li>
+    <li><a href="./refactors/cycler/4-create-one.html" target="_blank">/4-create-one.html</a></li>
+    <li><a href="./refactors/cycler/5-create-many.html" target="_blank">/5-create-many.html</a></li>
+    <li><a href="./refactors/cycler/6-class-one.html" target="_blank">/6-class-one.html</a></li>
+    <li><a href="./refactors/cycler/7-class-many.html" target="_blank">/7-class-many.html</a></li>
+</ul>
+</ul></details></li>  <li style='list-style-type: none;'><details><summary>/simple-javascript-quiz</summary>
 
 <ul>    <li style='list-style-type: none;'><details><summary>/0-tutorial</summary>
 
