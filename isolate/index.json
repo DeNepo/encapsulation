@@ -292,7 +292,6 @@
       "config": {
         "buttons": []
       }
-<<<<<<< HEAD
     },
     {
       "path": "/08-object-create",
@@ -341,8 +340,6 @@
           "path": "/transcribing.js"
         }
       ]
-=======
->>>>>>> 572513327c05326e4e90b88407e3b168446a5d02
     }
   ],
   "config": {
