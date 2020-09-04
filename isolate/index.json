@@ -233,19 +233,37 @@
       ]
     },
     {
-      "path": "/07-prototypical-inheritance",
+      "path": "/07-prototype-delegation",
       "dirs": [
         {
           "path": "/examples",
           "files": [
             {
-              "path": "/readme.js"
+              "path": "/00-global-classes.js"
             },
             {
               "path": "/01-prototype-chain.js"
             },
             {
-              "path": "/02-instance-vs-static.js"
+              "path": "/02-instances.js"
+            },
+            {
+              "path": "/04-prototype-delegation.js"
+            },
+            {
+              "path": "/05-undefined-properties.js"
+            },
+            {
+              "path": "/06-incercepting-delegation.js"
+            },
+            {
+              "path": "/07-instance-methods.js"
+            },
+            {
+              "path": "/08-static-methods.js"
+            },
+            {
+              "path": "/09-get-prototype-of.js"
             }
           ],
           "isExample": true
@@ -254,7 +272,19 @@
           "path": "/exercises",
           "files": [
             {
-              "path": "/static-or-instance-1.js"
+              "path": "/arrays.js"
+            },
+            {
+              "path": "/booleans.js"
+            },
+            {
+              "path": "/functions.js"
+            },
+            {
+              "path": "/numbers.js"
+            },
+            {
+              "path": "/objects.js"
             }
           ]
         }
@@ -266,6 +296,9 @@
     {
       "path": "/08-object-create",
       "files": [
+        {
+          "path": "/09-two-useful-methods.js"
+        },
         {
           "path": "/transcribing.js"
         }

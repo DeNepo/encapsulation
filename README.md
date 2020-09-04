@@ -38,7 +38,8 @@ Along the way you will get your first introduction to one of the main programmin
 - **Inheritance**
 - **Code Reuse (DRY)**
 
-### Soft Skills
+<details>
+<summary>Soft Skills</summary>
 
 - Data-first development
   - Understanding applications as Data + User Interactions
@@ -47,7 +48,10 @@ Along the way you will get your first introduction to one of the main programmin
 - Object Oriented TDD
   - Using tests to define and verify OOP programs
 
-### Hard Skills
+</details>
+
+<details>
+<summary>Hard Skills</summary>
 
 - Use the keyword `this`
   - Be able to refactor functions into methods
@@ -65,6 +69,8 @@ Along the way you will get your first introduction to one of the main programmin
   - How does each one treat `this` differently?
 - Closure 101:
   - Using `() => {}` handlers to avoid binding
+</details>
+
 
 [TOP](#encapsulation)
 
@@ -192,9 +198,11 @@ Learn to:
 
 > before class
 
-- Prototypical Inheritance
+- Prototype Delegation
   - [Just JavaScript](https://github.com/HackYourFutureBelgium/just-javascript/tree/master/09-prototypes)
-  - [prototype chain diagram](./diagrams/prototype-chain.jpeg)
+  - [prototype chain diagram](./diagrams/prototype-chain-1.jpeg)
+  - [more detailed diagram](./diagrams/prototype-chain-2.jpeg)
+  - [javascript.info](https://javascript.info/prototype-inheritance)
 - `Object.create()`
   - FunFunFunction: [Prototypes in JavaScript](https://www.youtube.com/watch?v=riDVvXZ_Kb4), [Prototype Basics](https://www.youtube.com/watch?v=YkoelSTUy7A&list=PL0zVEGEvSaeHBZFy6Q8731rcwk0Gtuxub&index=3),[`Object.create()`](https://www.youtube.com/watch?v=CDFN1VatiJA)
   - [Griffith](https://www.youtube.com/watch?v=qqyZn8X9M3I)
