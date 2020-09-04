@@ -292,17 +292,6 @@
       "config": {
         "buttons": []
       }
-    },
-    {
-      "path": "/08-object-create",
-      "files": [
-        {
-          "path": "/09-two-useful-methods.js"
-        },
-        {
-          "path": "/transcribing.js"
-        }
-      ]
     }
   ],
   "config": {
