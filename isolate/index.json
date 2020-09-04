@@ -295,10 +295,47 @@
     },
     {
       "path": "/08-object-create",
-      "files": [
+      "dirs": [
         {
-          "path": "/09-two-useful-methods.js"
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/01-object-create.js"
+            },
+            {
+              "path": "/02-this-delegated.js"
+            },
+            {
+              "path": "/03-own-data-delegated-logic.js"
+            }
+          ],
+          "isExample": true
         },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/1-write-data.js"
+            },
+            {
+              "path": "/2-write-data.js"
+            },
+            {
+              "path": "/3-write-logic.js"
+            },
+            {
+              "path": "/4-write-logic.js"
+            },
+            {
+              "path": "/5-pass-tests.js"
+            },
+            {
+              "path": "/6-pass-tests.js"
+            }
+          ]
+        }
+      ],
+      "files": [
         {
           "path": "/transcribing.js"
         }
