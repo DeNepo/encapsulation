@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>todoItem: literal</title>
+
+</head>
+
+<body>
+
+  <div id='user-interface'>
+    <p>console log <code>todoItems</code> to see all todo items and their states</p>
+    <hr>
+    <input id='new-text' />
+    <button id='create-todo-button'>create todo</button>
+    <div id='root'></div>
+  </div>
+
+  <script id='data'>
+    const todoItems = [];
+  </script>
+
+  <script id='todoItem-prototype'>
+    const todoItemPrototype = {
+      handleToggle: function (checkBox) {
+        this.state.complete = checkBox.checked;
+      },
+      handleTextChange: function (event) {
+        this.state.text = event.target.value;
+      },
+      render: function () {
+        const container = document.createElement('div');
+
+        const checkBoxEl = document.createElement('input');
+        checkBoxEl.type = 'checkbox';
+        checkBoxEl.checked = this.state.complete;
+        checkBoxEl.addEventListener('click', this.handleToggle.bind(this, checkBoxEl));
+        container.appendChild(checkBoxEl);
+
+
+        const textInputEl = document.createElement('input');
+        textInputEl.type = 'text';
+        textInputEl.value = this.state.text;
+        textInputEl.addEventListener('keyup', this.handleTextChange.bind(this));
+        container.appendChild(textInputEl);
+
+        return container;
+      }
+    };
+  </script>
+
+  <script id='handlers'>
+    const createTodoItemHandler = () => {
+      const newText = document.getElementById('new-text').value;
+
+      const newTodoItem = Object.create(todoItemPrototype);
+      newTodoItem.state = {
+        text: newText,
+        complete: false
+      };
+
+      const renderedTodoItem = newTodoItem.render();
+      document.getElementById('root')
+        .appendChild(renderedTodoItem);
+
+      todoItems.push(newTodoItem);
+    };
+  </script>
+
+  <script id='init'>
+    document.getElementById('create-todo-button')
+      .addEventListener('click', createTodoItemHandler);
+  </script>
+
+</body>
+
+</html>

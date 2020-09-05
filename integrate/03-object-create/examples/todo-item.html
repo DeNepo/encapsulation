@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>todoItem: literal</title>
+
+</head>
+
+<body>
+
+  <div id='user-interface'>
+    <p>console log <code>todoItem</code> to see state changes</p>
+    <div id='root'></div>
+  </div>
+
+
+  <script id='todoItem-app-object'>
+    const todoItem = {
+      state: {
+        text: 'howdy',
+        complete: true
+      },
+      handleToggle: function (checkBox) {
+        this.state.complete = checkBox.checked;
+      },
+      handleTextChange: function (event) {
+        this.state.text = event.target.value;
+      },
+      render: function () {
+        const container = document.createElement('div');
+
+        const checkBoxEl = document.createElement('input');
+        checkBoxEl.type = 'checkbox';
+        checkBoxEl.checked = this.state.complete;
+        checkBoxEl.addEventListener('click', this.handleToggle.bind(this, checkBoxEl));
+        container.appendChild(checkBoxEl);
+
+
+        const textInputEl = document.createElement('input');
+        textInputEl.type = 'text';
+        textInputEl.value = this.state.text;
+        textInputEl.addEventListener('keyup', this.handleTextChange.bind(this));
+        container.appendChild(textInputEl);
+
+        return container;
+      }
+    };
+  </script>
+
+  <script id='init'>
+    const renderedTodoItem = todoItem.render();
+
+    document.getElementById('root')
+      .appendChild(renderedTodoItem);
+  </script>
+
+</body>
+
+</html>

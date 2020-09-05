@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>colorCycler: prototype</title>
+
+  <style>
+    .color-cycler {
+      height: 5em;
+      width: 5em;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id='user-interface'>
+    <form>
+      <input type='number' min='0' value='2' name='x' /> x <input type='number' min='0' value='2' name='y' />
+      <input id='create-table-button' type='button' value='create table' name='createTable' />
+    </form>
+    <p>console log <code>currentCyclers</code> to see the state of each tile</p>
+    <hr>
+    <div id='root'>
+    </div>
+  </div>
+
+
+  <script id='data'>
+    let currentCyclers = [];
+  </script>
+
+  <script id='colorCycler-prototype'>
+    const colorCyclerPrototype = {
+
+    };
+  </script>
+
+  <script id='handler'>
+    const createTableHandler = (event) => {
+      currentCyclers = [];
+
+      const x = Number(event.target.form.x.value);
+      const y = Number(event.target.form.y.value);
+
+      // --- above here works
+
+      // create a new table with dimensions x, y
+      //  create a new cycler for each table cell
+      //  render the new cycler and append it to the cell
+      // be sure to push each cycler instance to currentCyclers!
+
+
+      // --- below here works
+
+      const rootEl = document.getElementById('root');
+      rootEl.innerHTML = '';
+      rootEl.appendChild(newTable);
+    };
+  </script>
+
+  <script id='init'>
+    document.getElementById('create-table-button')
+      .addEventListener('click', createTableHandler);
+  </script>
+
+</body>
+
+</html>

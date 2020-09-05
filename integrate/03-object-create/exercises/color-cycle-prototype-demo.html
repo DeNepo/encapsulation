@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>colorCycler: prototype demo</title>
+
+  <style>
+    .color-cycler {
+      height: 5em;
+      width: 5em;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id='user-interface'>
+    <form>
+      <input type='number' min='0' value='2' name='x' /> x <input type='number' min='0' value='2' name='y' />
+      <input id='create-table-button' type='button' value='create table' name='createTable' />
+    </form>
+    <p>console log <code>currentCyclers</code> to see the state of each tile</p>
+    <hr>
+    <div id='root'>
+    </div>
+  </div>
+
+
+  <script>
+    const a = ['bind', 'click', 'target', 'create-table-button', 'table', 'innerHTML', 'handleClick', 'form', 'style', 'div', 'backgroundColor', 'value', 'create', 'className', 'createElement', 'root', 'cycle', 'state', 'appendChild', 'addEventListener', 'rgb(']; (function (b, e) { const f = function (g) { while (--g) { b['push'](b['shift']()); } }; f(++e); }(a, 0x1db)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; let currentCyclers = []; const colorCyclerPrototype = { 'cycle': function () { this[b('0x4')]['r'] = (this[b('0x4')]['r'] + 0xa) % 0xff, this[b('0x4')]['g'] = (this['state']['g'] + 0x14) % 0xff, this[b('0x4')]['b'] = (this[b('0x4')]['b'] + 0x1e) % 0xff; }, 'handleClick': function (c) { this[b('0x3')](), c[b('0x10')][b('0x12')] = b('0x7') + this[b('0x4')]['r'] + ',' + this[b('0x4')]['g'] + ',' + this[b('0x4')]['b'] + ')'; }, 'render': function () { const c = document[b('0x1')](b('0x11')); return c[b('0x10')]['backgroundColor'] = 'rgb(' + this[b('0x4')]['r'] + ',' + this[b('0x4')]['g'] + ',' + this[b('0x4')]['b'] + ')', c[b('0x6')](b('0x9'), this[b('0xe')][b('0x8')](this, c)), c[b('0x0')] = 'color-cycler', c; } }, createTableHandler = c => { currentCyclers = []; const d = Number(c['target'][b('0xf')]['x'][b('0x13')]), e = Number(c[b('0xa')][b('0xf')]['y'][b('0x13')]), f = document['createElement'](b('0xc')); for (let h = 0x0; h < e; h++) { const k = document['createElement']('tr'); for (let l = 0x0; l < d; l++) { const m = Object[b('0x14')](colorCyclerPrototype); m[b('0x4')] = { 'r': 0x0, 'g': 0x0, 'b': 0x0 }, currentCyclers['push'](m); const n = document[b('0x1')]('td'), o = m['render'](); n[b('0x5')](o), k['appendChild'](n); } f[b('0x5')](k); } const g = document['getElementById'](b('0x2')); g[b('0xd')] = '', g[b('0x5')](f); }; document['getElementById'](b('0xb'))[b('0x6')](b('0x9'), createTableHandler);
+  </script>
+
+</body>
+
+</html>

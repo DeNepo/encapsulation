@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>cycler: literal</title>
+
+</head>
+
+<body>
+
+  <div id='user-interface'>
+    <div id='root'></div>
+  </div>
+
+
+  <script id='cycler-app-object'>
+    const cycler = {
+      state: {
+        min: 0,
+        max: 5,
+        current: 0
+      },
+      step: function () {
+        const nextStep = this.state.current + 1;
+        if (nextStep <= this.state.max) {
+          this.state.current = nextStep;
+        } else {
+          this.state.current = this.state.min;
+        }
+      },
+      handleClick: function (view) {
+        this.step();
+        view.innerHTML = this.state.current;
+      },
+      render: function () {
+        const container = document.createElement('p');
+        container.innerHTML = this.state.min;
+        container.addEventListener('click', this.handleClick.bind(this, container));
+        return container;
+      }
+    };
+  </script>
+
+  <script id='init'>
+    const renderedCycler = cycler.render();
+
+    document.getElementById('root')
+      .appendChild(renderedCycler);
+  </script>
+
+</body>
+
+</html>
