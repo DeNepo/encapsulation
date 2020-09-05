@@ -325,19 +325,8 @@
             },
             {
               "path": "/4-write-logic.js"
-            },
-            {
-              "path": "/5-pass-tests.js"
-            },
-            {
-              "path": "/6-pass-tests.js"
             }
           ]
-        }
-      ],
-      "files": [
-        {
-          "path": "/transcribing.js"
         }
       ]
     }

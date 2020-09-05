@@ -88,6 +88,22 @@ Examples and exercises to study
 </ul>
 </ul></details></li>
 </ul></details></li>
+</ul></details></li><li style='list-style-type: none;'><details><summary>/03-object-create</summary>
+
+<ul>  <li style='list-style-type: none;'><details><summary>/examples</summary>
+
+<ul><ul>    <li><a href="./03-object-create/examples/cycler-literal.html" target="_blank">/cycler-literal.html</a></li>
+    <li><a href="./03-object-create/examples/cycler-prototype.html" target="_blank">/cycler-prototype.html</a></li>
+    <li><a href="./03-object-create/examples/todo-item.html" target="_blank">/todo-item.html</a></li>
+    <li><a href="./03-object-create/examples/todo-items.html" target="_blank">/todo-items.html</a></li>
+</ul>
+</ul></details></li>  <li style='list-style-type: none;'><details><summary>/exercises</summary>
+
+<ul><ul>    <li><a href="./03-object-create/exercises/color-cycle-literal.html" target="_blank">/color-cycle-literal.html</a></li>
+    <li><a href="./03-object-create/exercises/color-cycle-prototype-demo.html" target="_blank">/color-cycle-prototype-demo.html</a></li>
+    <li><a href="./03-object-create/exercises/color-cycle-prototype.html" target="_blank">/color-cycle-prototype.html</a></li>
+</ul>
+</ul></details></li>
 </ul></details></li><li style='list-style-type: none;'><details><summary>/04-import-export</summary>
 
 <ul>  <li style='list-style-type: none;'><details><summary>/examples</summary>
