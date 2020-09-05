@@ -217,13 +217,18 @@ Learn to:
 
 #### Isolate
 
+- 7. Prototype Delegation
+- 8. `Object.create`
 
 #### Integrate
 
+- 3. `Object.create`
 
 ### Project
 
 > after class
+
+_announced Monday_
 
 #### Checklist
 
