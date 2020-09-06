@@ -40,6 +40,9 @@
   counter2.down();
   counter1.down();
 
+  const counter1Test = counter1.count === 0;
+  const counter2Test = counter2.count === 18;
+
   console.log('counter prototype:', counterPrototype);
   console.log('counter 1:', counter1);
   console.log('counter 2:', counter2);
