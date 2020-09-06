@@ -22,7 +22,7 @@
   const _2_objectLiteral = {};
 
   // these two variables reference the same value in JS memory
-  const _1b_objInstance__proto__ = _2_objectLiteral.__proto__;
+  const _1b_objectLiteral__proto__ = _2_objectLiteral.__proto__;
   const _1a_ObjectPrototype = Object.prototype;
 
   // end of the prototype chain
