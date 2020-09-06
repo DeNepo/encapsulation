@@ -36,20 +36,24 @@ const ArrayPrototype = Array.prototype;
 // Array.prototype.__proto__ references Object.prototype
 const ArrayPrototype__proto__ = Array.prototype.__proto__;
 
+
 // Boolean.prototype contains all the boolean methods
 const BooleanPrototype = Boolean.prototype;
 // Boolean.prototype.__proto__ references Object.prototype
 const BooleanPrototype__proto__ = Boolean.prototype.__proto__;
+
 
 // Function.prototype contains all the function methods
 const FunctionPrototype = Function.prototype;
 // Function.prototype.__proto__ references Object.prototype
 const FunctionPrototype__proto__ = Function.prototype.__proto__;
 
+
 // Number.prototype contains all the number methods
 const NumberPrototype = Number.prototype;
 // Function.prototype.__proto__ references Object.prototype
 const NumberPrototype__proto__ = Number.prototype.__proto__;
+
 
 // String.prototype contains all the string methods
 const StringPrototype = String.prototype;

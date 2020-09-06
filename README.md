@@ -96,6 +96,9 @@ In this module you'll learn how to:
 
 - [Practical JavaScript Tutorial](https://watchandcode.com/p/practical-javascript) (best tutorial ever)
 - [study.hyf.be/js/oop](https://study.hackyourfuture.be/javascript/oop) (more links)
+- Getters & Setters
+  - [Mosh](https://programmingwithmosh.com/javascript/javascript-properties-getters-and-setters/)
+  - [Zell](https://dev.to/zellwk/why-use-getters-and-setters-functions-5a5f)
 
 ### Binding
 
