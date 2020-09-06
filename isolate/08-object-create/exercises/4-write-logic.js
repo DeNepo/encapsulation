@@ -5,7 +5,7 @@ const userPrototype = {
   get status() {
     // render userName and loggedIn status into a string
   },
-  logIn: function (passWord) {
+  logIn: function (password) {
     // log the user in if they pass the correct password
   },
   logOut: function () {
@@ -49,8 +49,8 @@ userRory.logIn('HYF-BE');
 
 
 // test intermediate states
-const testAverie1 = userAverie.status === 'Averie is logged out';
-console.assert(testAverie1, 'Averie 1: Averie is logged out');
+const testAverie1 = userAverie.status === 'Averie is logged in';
+console.assert(testAverie1, 'Averie 1: Averie is logged in');
 
 const testRory1 = userRory.status === 'Rory is logged in';
 console.assert(testRory1, 'Rory 1: Rory is logged in');
