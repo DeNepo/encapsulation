@@ -215,11 +215,11 @@ Learn to:
 
 > during class
 
-#### Isolate
+#### Before Break
 
 - Isolate: 7. Prototype Delegation
 
-#### Integrate
+#### After Break
 
 - Isolate: 8. `Object.create`
 - Integrate: 3. `Object.create`
