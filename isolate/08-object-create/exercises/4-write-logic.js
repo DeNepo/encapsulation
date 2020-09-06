@@ -23,7 +23,7 @@ const userAverie = Object.create(userPrototype);
 userAverie.state = {
   loggedIn: false,
   userName: 'Averie',
-  password: 'bruxelles1000'
+  password: 'brussels1000'
 };
 
 const userRory = Object.create(userPrototype);
@@ -43,21 +43,21 @@ console.assert(testRory0, 'Rory 0: Rory is logged in');
 
 // users do things
 userRory.logOut();
-userAverie.changePassword('bruxelles1000', 'copenhagen2000');
-userAverie.logIn('bruxelles1000');
+userAverie.changePassword('brussels1000', 'copenhagen2000');
+userAverie.logIn('brussels1000');
 userRory.logIn('HYF-BE');
 
 
 // test intermediate states
-const testAverie1 = userAverie.status === 'Averie is logged in';
-console.assert(testAverie1, 'Averie 1: Averie is logged in');
+const testAverie1 = userAverie.status === 'Averie is logged out';
+console.assert(testAverie1, 'Averie 1: Averie is logged out');
 
 const testRory1 = userRory.status === 'Rory is logged in';
 console.assert(testRory1, 'Rory 1: Rory is logged in');
 
 
 // users do things
-userAverie.changePassword('brussels1000', 'copenhagen2000');
+userAverie.changePassword('bruxelles1000', 'copenhagen2000');
 userAverie.logOut();
 userRory.changePassword('HYF-BE', 'HYF-CPH');
 userRory.logOut();
@@ -76,7 +76,8 @@ console.assert(testRory2, 'Rory 2: Rory is logged in');
 // users do things
 userRory.logOut();
 userAverie.logIn('bruxelles1000');
-userAverie.changePassword('bruxelles1000', 'copenhagen2000');
+userAverie.logIn('brussels1000');
+userAverie.changePassword('brussels1000', 'copenhagen2000');
 userAverie.logOut();
 userRory.logOut();
 userAverie.logIn('copenhagen2000');
