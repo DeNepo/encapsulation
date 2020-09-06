@@ -11,12 +11,22 @@
   console.log('basic example');
 
   const objectA = { id: 'a' };
+  const objectATest1 = objectA.hasOwnProperty('id');
+  const objectATest2 = objectA.id;
 
   const objectB = Object.create(objectA);
+  const objectBTest1 = objectB.hasOwnProperty('id');
+  const objectBTest2 = objectB.id;
   objectB.id = 'b';
+  const objectBTest3 = objectB.hasOwnProperty('id');
+  const objectBTest4 = objectB.id;
 
   const objectC = Object.create(objectB);
-  objectC.id = 'c';
+  const objectCTest1 = objectC.hasOwnProperty('id');
+  const objectCTest2 = objectC.id;
+  objectC.id = 'b';
+  const objectCTest3 = objectC.hasOwnProperty('id');
+  const objectCTest4 = objectC.id;
 
   console.log('object a:', objectA);
   console.log('object b:', objectB);
