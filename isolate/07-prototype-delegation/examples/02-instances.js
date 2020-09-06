@@ -28,7 +28,7 @@
   // end of the prototype chain
   const _0_ObjectPrototype__proto__ = Object.prototype.__proto__;
 
-  console.log('object instance:', _2_objectLiteral);
+  console.log('object literal:', _2_objectLiteral);
 }
 
 
@@ -48,7 +48,7 @@
   // end of the prototype chain
   const _0_ObjectPrototype__proto__ = Object.prototype.__proto__;
 
-  console.log('array instance:', _3_arrayLiteral);
+  console.log('array literal:', _3_arrayLiteral);
 }
 
 
@@ -66,7 +66,7 @@
   // end of the prototype chain
   const _0_ObjectPrototype__proto__ = Object.prototype.__proto__;
 
-  console.log('string instance:', _3_stringLiteral);
+  console.log('string literal:', _3_stringLiteral);
 }
 
 
@@ -84,7 +84,7 @@
   // end of the prototype chain
   const _0_ObjectPrototype__proto__ = Object.prototype.__proto__;
 
-  console.log('number instance:', _3_numberLiteral);
+  console.log('number literal:', _3_numberLiteral);
 }
 
 
@@ -102,7 +102,7 @@
   // end of the prototype chain
   const _0_ObjectPrototype__proto__ = Object.prototype.__proto__;
 
-  console.log('boolean instance:', _3_booleanLiteral);
+  console.log('boolean literal:', _3_booleanLiteral);
 }
 
 
@@ -120,7 +120,7 @@
   // end of the prototype chain
   const _0_ObjectPrototype__proto__ = Object.prototype.__proto__;
 
-  console.log('es5 function instance:', _3_es5Function);
+  console.log('es5 function literal:', _3_es5Function);
 }
 
 
@@ -138,5 +138,5 @@
   // end of the prototype chain
   const _0_ObjectPrototype__proto__ = Object.prototype.__proto__;
 
-  console.log('es6 function instance:', _3_es6Function);
+  console.log('es6 function literal:', _3_es6Function);
 }
