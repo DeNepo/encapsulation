@@ -57,6 +57,6 @@ incrementorB.increment(); // value --> 0
 incrementorB.stepSize = 4;
 incrementorB.increment(); // value --> 4
 
-const testValueA = incrementorB.value === 4;
+const testValueB = incrementorB.value === 4;
 
 console.log('incrementorB:', incrementorB);
