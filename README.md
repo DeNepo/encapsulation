@@ -317,3 +317,6 @@ Screen recordings of class.  Coaches, when sending your PR's with links please .
 1. Week 1:
     - Part 1: [`this`](https://vimeo.com/453294595)
     - Part 2: [OOP Refactor](https://vimeo.com/453294872)
+2. Week 2:
+    - Part 1: [getting/setting & Prototypes](https://vimeo.com/455538183)
+    - Part 2: [`Object.create` pt. 1](https://vimeo.com/455538415), [pt. 2](https://vimeo.com/455538951)
