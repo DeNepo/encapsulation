@@ -231,7 +231,9 @@ Learn to:
 
 > after class
 
-_announced Monday_
+List Manager!  Following up on the tutorial from last week, your group will be building a web page that allows users to create as many lists as they want.  You will need to refactor the todo list from WatchAndCode into a prototype object that can be used to create so list instances.  A suggestion:  users can input a title and create a new list with that title.
+
+Along with prototypes, your group will be exploring `import` and `export`.  This week's [starter repository](https://github.com/HackYourFutureBelgium/starter-encapsulation-list-prototype) has the basics already in place for you.  Enjoy!
 
 #### Checklist
 
@@ -245,8 +247,6 @@ _announced Monday_
   - [ ] [Project board](https://github.com/_/_/projects/_)
 - Implementation
   - [ ] ES Modules (`import`/`export`)
-  - [ ] Tests for logic & view methods
-  - [ ] Initial state in `src/data.js`
   - [ ] Logs of each user interaction
 ```
 
