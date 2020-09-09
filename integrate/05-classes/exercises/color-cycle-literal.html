@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf8'>
+  <title>colorCycler: literal</title>
+
+  <style>
+    .color-cycler {
+      height: 5em;
+      width: 5em;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id='user-interface'>
+    <div id='root'></div>
+  </div>
+
+
+  <script id='colorCycler-app-object'>
+    const colorCycler = {
+      state: {
+        r: 0,
+        g: 0,
+        b: 0
+      },
+      cycle: function () {
+        this.state.r = (this.state.r + 10) % 255;
+        this.state.g = (this.state.g + 20) % 255;
+        this.state.b = (this.state.b + 30) % 255;
+      },
+      handleClick: function (element) {
+        this.cycle();
+        element.style.backgroundColor = `rgb(${this.state.r},${this.state.g},${this.state.b})`;
+      },
+      render: function () {
+        const container = document.createElement('div');
+        container.addEventListener('click', this.handleClick.bind(this, container));
+        container.className = 'color-cycler';
+        return container;
+      }
+    };
+  </script>
+
+  <script id='init'>
+    const renderedColorCycler = colorCycler.render();
+
+    document.getElementById('root')
+      .appendChild(renderedColorCycler);
+  </script>
+
+</body>
+
+</html>

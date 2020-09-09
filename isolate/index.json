@@ -329,6 +329,104 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/09-classes",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/00-classes-are-functions.js"
+            },
+            {
+              "path": "/01-new-class-instance.js"
+            },
+            {
+              "path": "/02-instanceof.js"
+            },
+            {
+              "path": "/03-public-class-fields.js"
+            },
+            {
+              "path": "/04-constructor.js"
+            },
+            {
+              "path": "/05-static-methods.js"
+            },
+            {
+              "path": "/06-literal-to-class.js"
+            },
+            {
+              "path": "/07-object-create-to-class.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/literals-to-class",
+          "files": [
+            {
+              "path": "/challenge-1.js"
+            },
+            {
+              "path": "/challenge-2.js"
+            },
+            {
+              "path": "/challenge-3.js"
+            },
+            {
+              "path": "/challenge-4.js"
+            },
+            {
+              "path": "/example.js",
+              "isExample": true
+            }
+          ]
+        },
+        {
+          "path": "/object-to-class",
+          "files": [
+            {
+              "path": "/challenge-1.js"
+            },
+            {
+              "path": "/challenge-2.js"
+            },
+            {
+              "path": "/challenge-3.js"
+            },
+            {
+              "path": "/challenge-4.js"
+            },
+            {
+              "path": "/example.js",
+              "isExample": true
+            }
+          ]
+        },
+        {
+          "path": "/static-methods",
+          "files": [
+            {
+              "path": "/challenge-1.js"
+            },
+            {
+              "path": "/challenge-2.js"
+            },
+            {
+              "path": "/challenge-3.js"
+            },
+            {
+              "path": "/challenge-4.js"
+            },
+            {
+              "path": "/example.js",
+              "isExample": true
+            }
+          ]
+        }
+      ]
     }
   ],
   "config": {

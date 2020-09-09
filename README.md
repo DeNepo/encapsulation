@@ -262,25 +262,46 @@ Learn to use `Class`es for a reusable code base.
 
 > before class
 
+- Classes
+  - [Traversy](https://www.youtube.com/watch?v=RBLIm5LMrmc)
+  - [javascript.info](https://javascript.info/class)
+  - [Beau](https://www.youtube.com/watch?v=bq_jZY6Skto)
+  - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
 ### Lesson Plan
 
 > during class
 
-#### Isolate
+#### Before Break
 
+- [isolate](./isolate/index.html)
+  - 9. Classes
 
-#### Integrate
+#### After Break
 
+- [integrate](./integrate/index.html)
+  - 5. Classes
 
 ### Project
 
 > after class
 
-
+Impress yourselves! (starter repo coming soon)
 
 #### Checklist
 
 ```md
+- [ ] [repo](https://github.com/_/_) (with a complete README)
+- [ ] [live demo](https://_.github.io/_)
+- Project Planning
+  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
+  - [ ] [Communication](https://github.com/_/_/tree/master/project-planning/backlog.md)
+  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
+  - [ ] [Project board](https://github.com/_/_/projects/_)
+- Implementation
+  - [ ] ES Modules (`import`/`export`)
+  - [ ] at least one `class`
+  - [ ] Logs of each user interaction
 ```
 
 [TOP](#encapsulation)
