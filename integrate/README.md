@@ -197,6 +197,22 @@ Examples and exercises to study
 </ul>
 </ul></details></li>
 </ul></details></li>
+</ul></details></li><li style='list-style-type: none;'><details><summary>/05-classes</summary>
+
+<ul>  <li style='list-style-type: none;'><details><summary>/examples</summary>
+
+<ul><ul>    <li><a href="./05-classes/examples/cycler-class.html" target="_blank">/cycler-class.html</a></li>
+    <li><a href="./05-classes/examples/cycler-create.html" target="_blank">/cycler-create.html</a></li>
+    <li><a href="./05-classes/examples/todo-items-class.html" target="_blank">/todo-items-class.html</a></li>
+    <li><a href="./05-classes/examples/todo-items-create.html" target="_blank">/todo-items-create.html</a></li>
+</ul>
+</ul></details></li>  <li style='list-style-type: none;'><details><summary>/exercises</summary>
+
+<ul><ul>    <li><a href="./05-classes/exercises/color-cycle-class-demo.html" target="_blank">/color-cycle-class-demo.html</a></li>
+    <li><a href="./05-classes/exercises/color-cycle-class.html" target="_blank">/color-cycle-class.html</a></li>
+    <li><a href="./05-classes/exercises/color-cycle-literal.html" target="_blank">/color-cycle-literal.html</a></li>
+</ul>
+</ul></details></li>
 </ul></details></li>
 
 <!-- END TOC -->

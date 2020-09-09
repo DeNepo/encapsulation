@@ -364,65 +364,19 @@
           "isExample": true
         },
         {
-          "path": "/literals-to-class",
+          "path": "/exercises",
           "files": [
             {
-              "path": "/challenge-1.js"
+              "path": "/1-literal-to-class.js"
             },
             {
-              "path": "/challenge-2.js"
+              "path": "/2-prototype-to-class.js"
             },
             {
-              "path": "/challenge-3.js"
+              "path": "/3-pass-tests.js"
             },
             {
-              "path": "/challenge-4.js"
-            },
-            {
-              "path": "/example.js",
-              "isExample": true
-            }
-          ]
-        },
-        {
-          "path": "/object-to-class",
-          "files": [
-            {
-              "path": "/challenge-1.js"
-            },
-            {
-              "path": "/challenge-2.js"
-            },
-            {
-              "path": "/challenge-3.js"
-            },
-            {
-              "path": "/challenge-4.js"
-            },
-            {
-              "path": "/example.js",
-              "isExample": true
-            }
-          ]
-        },
-        {
-          "path": "/static-methods",
-          "files": [
-            {
-              "path": "/challenge-1.js"
-            },
-            {
-              "path": "/challenge-2.js"
-            },
-            {
-              "path": "/challenge-3.js"
-            },
-            {
-              "path": "/challenge-4.js"
-            },
-            {
-              "path": "/example.js",
-              "isExample": true
+              "path": "/4-pass-tests.js"
             }
           ]
         }
