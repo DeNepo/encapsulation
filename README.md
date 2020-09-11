@@ -286,7 +286,7 @@ Learn to use `Class`es for a reusable code base.
 
 > after class
 
-Impress yourselves! (starter repo coming soon)
+Impress yourselves! Using [this starter repository](https://github.com/HackYourFutureBelgium/encapsulation-starter-wk-3-class/), plan and scope a project of your choosing. This can be a totally new idea or a reworking of a previous project, maybe even a continuation of last week's project!
 
 #### Checklist
 
