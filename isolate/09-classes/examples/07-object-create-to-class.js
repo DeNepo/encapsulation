@@ -1,4 +1,15 @@
-// the challenge
+'use strict';
+
+/* Refactor: Prototype to Class
+
+  Prototypes and Classes are similar behind the scenes
+  but have quite different syntax and instantiation
+  This refactor example shows how you can go from prototype to class
+    while preserving the same behavior
+
+*/
+
+// the prototype
 
 const coordinatesPrototype = {
   render: function () {
@@ -15,7 +26,7 @@ const coordinatesPrototype = {
 };
 
 
-// the solution
+// refactored class
 
 class Coordinates {
   constructor(x, y) {

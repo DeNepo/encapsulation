@@ -310,9 +310,8 @@ Impress yourselves! Using [this starter repository](https://github.com/HackYourF
 
 ## Class Recordings
 
-Screen recordings of class.  Coaches, when sending your PR's with links please ...
+Coaches, when sending your PR's with links please ...
 
-- Add a link to your video in the correct module's section
 - Indicate which class you were teaching
 - Which week it was
 - Give your name

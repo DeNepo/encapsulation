@@ -1,42 +1,71 @@
-// the challenge
+`use strict`;
+
+/* Refactor: Object Literals to a class
+
+  Using classes and inheritance is all about abstraction and code reuse
+  This example shows how you can refactor repetitive object literals in to a class
+
+*/
+
+// object literals
 
 const literalA = {
-  x: 4,
-  y: 2,
+  state: {
+    x: 4,
+    y: 2,
+  },
   render: function () {
-    return `( X: ${this.x}, Y: ${this.y} )`;
+    return `( X: ${this.state.x}, Y: ${this.state.y} )`;
   },
   set coordinates(coords) {
-    if (typeof coords.x === 'number') this.x = coords.x;
-    if (typeof coords.y === 'number') this.y = coords.y;
+    if (typeof coords.x === 'number') {
+      this.state.x = coords.x;
+    }
+    if (typeof coords.y === 'number') {
+      this.state.y = coords.y;
+    }
   }
 };
 
 const literalB = {
-  x: 0.3,
-  y: 14,
+  state: {
+    x: 0.3,
+    y: 14,
+  },
   render: function () {
-    return `( X: ${this.x}, Y: ${this.y} )`;
+    return `( X: ${this.state.x}, Y: ${this.state.y} )`;
   },
   set coordinates(coords) {
-    if (typeof coords.x === 'number') this.x = coords.x;
-    if (typeof coords.y === 'number') this.y = coords.y;
+    if (typeof coords.x === 'number') {
+      this.state.x = coords.x;
+    }
+    if (typeof coords.y === 'number') {
+      this.state.y = coords.y;
+    }
   }
 };
 
-// the solution
+// refactored class
 
 class Coordinates {
+  state = {
+    x: 0,
+    y: 0
+  };
   constructor(x, y) {
-    this.x = x;
-    this.y = y;
+    this.state.x = x;
+    this.state.y = y;
   }
   render() {
-    return `( X: ${this.x}, Y: ${this.y} )`;
+    return `( X: ${this.state.x}, Y: ${this.state.y} )`;
   }
   set coordinates(coords) {
-    if (typeof coords.x === 'number') this.x = coords.x;
-    if (typeof coords.y === 'number') this.y = coords.y;
+    if (typeof coords.x === 'number') {
+      this.state.x = coords.x;
+    }
+    if (typeof coords.y === 'number') {
+      this.state.y = coords.y;
+    }
   }
 };
 
@@ -50,8 +79,8 @@ const test1b = instanceB instanceof Coordinates;
 console.assert(test1a, 'Test 1.A - instanceof');
 console.assert(test1b, 'Test 1.B');
 
-const test2a = instanceA.hasOwnProperty('x') && instanceA.hasOwnProperty('y');
-const test2b = instanceB.hasOwnProperty('x') && instanceB.hasOwnProperty('y');
+const test2a = instanceA.hasOwnProperty('state');
+const test2b = instanceB.hasOwnProperty('state');
 console.assert(test2a, 'Test 2.A - own properties');
 console.assert(test2b, 'Test 2.B');
 
@@ -67,8 +96,8 @@ console.assert(test4b, 'Test 4.B');
 
 instanceA.coordinates = { x: 5 };
 instanceB.coordinates = { y: 0 };
-const test5a = instanceA.x === 5 && instanceA.y === 2;
-const test5b = instanceB.x === 0.3 && instanceB.y === 0;
+const test5a = instanceA.state.x === 5 && instanceA.state.y === 2;
+const test5b = instanceB.state.x === 0.3 && instanceB.state.y === 0;
 console.assert(test5a, 'Test 5.A - set coordinates');
 console.assert(test5b, 'Test 5.B');
 
