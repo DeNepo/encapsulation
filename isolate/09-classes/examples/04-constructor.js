@@ -23,7 +23,7 @@ class Cat {
 
   state = {}
 
-  constructor(name, age = 0) {
+  constructor(name = '', age = 0) {
     this.state.name = name;
     if (typeof age === 'number' && age >= 0) {
       this.state.age = age;

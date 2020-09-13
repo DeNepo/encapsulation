@@ -108,6 +108,11 @@ In this module you'll learn how to:
   - [this & bind pt. 2](https://www.youtube.com/watch?v=PIkA60I0dKU&list=PL0zVEGEvSaeHBZFy6Q8731rcwk0Gtuxub&index=2)
 - Zach Gordon: [this](https://www.youtube.com/watch?v=2qMKjWf1KdE), [binding this](https://www.youtube.com/watch?v=73aAyap_88w), [example: event handlers](https://www.youtube.com/watch?v=sxRnmKldiBs)
 - [Binding example in JS Tutor](http://www.pythontutor.com/javascript.html#code=function%20returnThis%28%29%20%7B%0A%20%20return%20this%3B%0A%7D%0Aconst%20demo0%20%3D%20returnThis%28%29%3B%0A%0Aconst%20obj1%20%3D%20%7B%0A%20%20id%3A%201,%0A%20%20returnThis%0A%7D%3B%0Aconst%20demo1%20%3D%20obj1.returnThis%28%29%3B%0A%0Aconst%20obj2%20%3D%20%7B%20id%3A%202%20%7D%3B%0Aconst%20boundToObj2%20%3D%20returnThis.bind%28obj2%29%3B%0Aconst%20demo2%20%3D%20boundToObj2%28%29%3B%0A%0Aconst%20boundToLiteral%20%3D%20returnThis.bind%28%7B%20id%3A%203%20%7D%29%3B%0Aconst%20demo3%20%3D%20boundToLiteral%28%29%3B&curInstr=0&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
+- [`() => {}` vs. `function() {}`](https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/)
+
+### Prototypes & Delegation
+
+- [Common Misconceptions](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a)
 
 ### Exercises
 
@@ -127,6 +132,8 @@ In this module you'll learn how to:
 - [Kata for Fun (not only OOP)](https://github.com/edsonha/kata-for-fun)
 
 [TOP](#encapsulation)
+
+---
 
 ## Week 1
 
@@ -286,7 +293,9 @@ Learn to use `Class`es for a reusable code base.
 
 > after class
 
-Impress yourselves! Using [this starter repository](https://github.com/HackYourFutureBelgium/encapsulation-starter-wk-3-class/), plan and scope a project of your choosing. This can be a totally new idea or a reworking of a previous project, maybe even a continuation of last week's project!
+Impress yourselves! Using [this starter repository](https://github.com/HackYourFutureBelgium/encapsulation-starter-wk-3-class/), plan and scope a project of your choosing. This can be a totally new idea or a reworking of a previous project.
+
+If your group decides to continue last week's project, there's no need to move to a new repository.  Just try refactoring your project from prototypes to classes.
 
 #### Checklist
 
