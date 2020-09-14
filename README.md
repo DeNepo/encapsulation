@@ -341,7 +341,7 @@ Coaches, when sending your PR's with links please ...
 
 ### Class 9 & 10
 
-> [Anthony](https://github.com/Toinne/), [Unmesh](https://github.com/unmeshvrije/), [Evan](https://github.com/colevandersWands)
+> [Anthony](https://github.com/Toinne/), [Unmesh](https://github.com/unmeshvrije/), [Nawang](https://github.com/nawatend)
 
 1. Week 1:
     - Part 1: [`this`](https://vimeo.com/453294595)
@@ -349,3 +349,6 @@ Coaches, when sending your PR's with links please ...
 2. Week 2:
     - Part 1: [getting/setting & Prototypes](https://vimeo.com/455538183)
     - Part 2: [`Object.create` pt. 1](https://vimeo.com/455538415), [pt. 2](https://vimeo.com/455538951)
+3. Week 3:
+    - Part 1: [Isolating Classes](https://vimeo.com/457832595)
+    - Part 2: [Integrating Classes](https://vimeo.com/457832956)
