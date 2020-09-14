@@ -27,7 +27,7 @@ console.assert(test3a, 'Test 3.A - not-own properties');
 console.assert(test3b, 'Test 3.B');
 
 const test4a = deepCompare(instanceA.state, {
-  evens: ["", "2"],
+  evens: ["2", ""],
   odds: ["3"],
   nanys: ["e"]
 });
@@ -39,18 +39,18 @@ const test4b = deepCompare(instanceB.state, {
 console.assert(test4a, 'Test 4.A - initial values');
 console.assert(test4b, 'Test 4.B');
 
-const test5a = deepCompare(instanceA.all("evens"), '2,');
-const test5b = deepCompare(instanceB.all("evens"), '-0');
+const test5a = deepCompare(instanceA.all("evens"), ["2", ""]);
+const test5b = deepCompare(instanceB.all("evens"), ["-0"]);
 console.assert(test5a, 'Test 5.A - .all("evens")');
 console.assert(test5b, 'Test 5.B');
 
-const test6a = deepCompare(instanceA.all("odds"), '3');
-const test6b = deepCompare(instanceB.all("odds"), '5');
+const test6a = deepCompare(instanceA.all("odds"), ['3']);
+const test6b = deepCompare(instanceB.all("odds"), ['5']);
 console.assert(test6a, 'Test 6.A - .all("odds")');
 console.assert(test6b, 'Test 6.B');
 
-const test7a = deepCompare(instanceA.all("nanys"), 'e');
-const test7b = deepCompare(instanceB.all("nanys"), '!');
+const test7a = deepCompare(instanceA.all("nanys"), ['e']);
+const test7b = deepCompare(instanceB.all("nanys"), ['!']);
 console.assert(test7a, 'Test 7.A - .all("nanys")');
 console.assert(test7b, 'Test 7.B');
 
@@ -63,7 +63,7 @@ instanceB.addString('I0');
 instanceB.addString('9');
 
 const test8a = deepCompare(instanceA.state, {
-  evens: ["", "2", "12"],
+  evens: ["2", "", "12"],
   odds: ["3", "1"],
   nanys: ["e", "*"]
 });
@@ -75,18 +75,18 @@ const test8b = deepCompare(instanceB.state, {
 console.assert(test8a, 'Test 8.A - new values');
 console.assert(test8b, 'Test 8.B');
 
-const test9a = deepCompare(instanceA.all("evens"), '2,,12');
-const test9b = deepCompare(instanceB.all("evens"), '-0,8');
+const test9a = deepCompare(instanceA.all("evens"), ['2', '', '12']);
+const test9b = deepCompare(instanceB.all("evens"), ['-0', '8']);
 console.assert(test9a, 'Test 9.A - .all("evens")');
 console.assert(test9b, 'Testt 9.B');
 
-const test10a = deepCompare(instanceA.all("odds"), '3,1');
-const test10b = deepCompare(instanceB.all("odds"), '5,9');
+const test10a = deepCompare(instanceA.all("odds"), ['3', '1']);
+const test10b = deepCompare(instanceB.all("odds"), ['5', '9']);
 console.assert(test10a, 'Test 10.A - .all("odds")');
 console.assert(test10b, 'Test 10.B');
 
-const test11a = deepCompare(instanceA.all("nanys"), 'e,*');
-const test11b = deepCompare(instanceB.all("nanys"), '!,I0');
+const test11a = deepCompare(instanceA.all("nanys"), ['e', '*']);
+const test11b = deepCompare(instanceB.all("nanys"), ['!', 'I0']);
 console.assert(test11a, 'Test 11.A - .all("nanys")');
 console.assert(test11b, 'Test 11.B');
 
