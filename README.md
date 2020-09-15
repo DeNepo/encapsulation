@@ -114,6 +114,18 @@ In this module you'll learn how to:
 
 - [Common Misconceptions](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a)
 
+### ES6 Modules
+
+- articles
+  - [javascript.info/modules-intro](https://javascript.info/modules-intro)
+  - [javascript.info/import-export](https://javascript.info/import-export)
+  - [javascripttutorial.net](https://www.javascripttutorial.net/es6/es6-modules/)
+- videos
+  - [Web Dev Simplified](https://www.youtube.com/watch?v=cRHQNNcYf6s)
+  - [The Codeholic](https://www.youtube.com/watch?v=ananPWEdfDA)
+  - [Meth Meth Method](https://www.youtube.com/watch?v=aWah7hLrSa8)
+  - [HYF class recording](https://vimeo.com/412299042)
+
 ### Exercises
 
 - [Isolate](./isolate/index.html)
@@ -339,7 +351,7 @@ Coaches, when sending your PR's with links please ...
     - Part 1: [binding, and why it matters](https://vimeo.com/401830596)
     - Part 2: [binding handlers](https://vimeo.com/401853625)
 
-### Class 9 & 10
+### [Class 9 & 10](https://hackyourfuture.be/class-9-10)
 
 > [Anthony](https://github.com/Toinne/), [Unmesh](https://github.com/unmeshvrije/), [Nawang](https://github.com/nawatend)
 
