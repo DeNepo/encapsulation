@@ -1,0 +1,33 @@
+init
+  no method
+  yes file
+
+app.js
+  handlers
+  logic
+  views
+
+data.js
+
+listeners
+  as before
+
+
+levels
+  - project ideas
+    - 3-4 projects because be reasonable
+      tictactoe - instantiate different board sizes
+      summary details - add and remove "profile" instances
+      searchable dictionary - instantiate with word list, words have their own delete button
+    - must be instanceable
+    - will be same projects through all 3 levels
+    - besides creation, 3 levels must be the same
+    - introduce the board/square concept
+    a tictactoe board that takes the height and width as data
+    de-async the projects from async-programming
+    multiply the projects from literals
+  object literals
+    all use binding handlers
+  object.create
+    introduce the idea of a "container" class that manages instances
+  classes

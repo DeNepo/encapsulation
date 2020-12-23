@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf8" />
+    <title>cycler: create many</title>
+  </head>
+
+  <body>
+    <div id="user-interface">
+      <form>
+        <input type="number" name="numberOfCyclers" value="0" min="0" />
+        <input id="create-button" type="button" value="create cyclers" />
+      </form>
+      <div id="root"></div>
+    </div>
+
+    <script id="cycler-class">
+      class Cycler {
+        state = {
+          min: 0,
+          max: 0,
+          current: 0,
+        };
+
+        constructor(min = 0, max = 0) {
+          this.state.min = min;
+          this.state.max = max;
+        }
+
+        step() {
+          const nextStep = this.state.current + 1;
+          if (nextStep <= this.state.max) {
+            this.state.current = nextStep;
+          } else {
+            this.state.current = this.state.min;
+          }
+        }
+
+        handleClick(view) {
+          this.step();
+          view.innerHTML = this.state.current;
+          console.log(`clicked ${this.state.max} cycler:`, { ...this.state });
+        }
+
+        render() {
+          const container = document.createElement('p');
+          container.innerHTML = this.state.min;
+          container.addEventListener(
+            'click',
+            this.handleClick.bind(this, container)
+          );
+          return container;
+        }
+      }
+    </script>
+
+    <script id="handlers">
+      const handleCreateCyclers = event => {
+        const numberOfCyclers = Number(event.target.form.numberOfCyclers.value);
+
+        const cyclersToLog = [];
+        const olEl = document.createElement('ol');
+        for (let i = 0; i < numberOfCyclers; i++) {
+          const newCycler = new Cycler(0, i + 1);
+          const renderedCycler = newCycler.render();
+          const li = document.createElement('li');
+          li.appendChild(renderedCycler);
+          olEl.appendChild(li);
+
+          cyclersToLog.push(newCycler);
+        }
+
+        const root = document.getElementById('root');
+        root.innerHTML = '';
+        root.appendChild(olEl);
+
+        console.log(`created ${numberOfCyclers} cyclers:`, cyclersToLog);
+      };
+    </script>
+
+    <script id="init">
+      document
+        .getElementById('create-button')
+        .addEventListener('click', handleCreateCyclers);
+    </script>
+  </body>
+</html>
