@@ -2,19 +2,26 @@
 
 > A little guide for who ever is teaching this module, and for curious students.
 
-The main objective of this module are more theoretical and higher-level. There is no new JavaScript here, just new ways to use it:
+The main objective of this module is for students to learn how they can encapsulate their logic, data, views and handlers into a single object using `this`. Along the way they will cover:
 
-- Thinking of applications as data + interactions
-- Reading program logs to understand the flow of a program, user interactions, and changes in state (this can be demonstrated by stepping through the /separated projects together in class)
-- Thinking of UI's as being just a representation of the data stored in the program (introducing the concept of component-based UI design could be relevant, depending on the class)
-- Writing and using functions that render data into DOM elements, getting fancy
+- using `this` to access other methods and properties in an object
+- setting event listeners in view methods; binding `this` to handler methods
+- prototypical inheritance: `Object.create` & `class`es
+- static vs. instance methods
+- combining all of this in simple frontend projects
 
-All of this will be put into practice in a large-ish group project over the two weeks of this module, the project is a JS Quiz using this [starter repo](https://github.com/HackYourFutureBelgium/js-quiz-starter). Students are given a project structure and a possible backlog, then will be let loose to plan and develope the project.
+Things that won't be covered:
+
+- constructor functions
+- extending classes
+
+---
 
 - [Before this Module](#before-this-module)
 - [During this Module](#during-this-module)
   - [common confusions](#common-confusions)
   - [week 1](#week-1)
+  - [week 2](#week-2)
   - [week 2](#week-2)
 - [After this Module](#after-this-module)
 - [helpful links](#helpful-links)
@@ -23,32 +30,11 @@ All of this will be put into practice in a large-ish group project over the two 
 
 ## Before this Module
 
-In the previous module ([separation-of-concerns](https://github.com/HackYourFutureBelgium/separation-of-concerns/)) students learned how to divide projects into multiple files and to distribute tasks in a team. They learned this type of folder structure (starter repo [is here](https://github.com/HackYourFutureBelgium/javascript-30-starter)):
+In the previous module ([state](https://github.com/HackYourFutureBelgium/separation-of-concerns/)) students learned how to build applications around data organized in an object and to log user interactions. They learned this type of folder structure:
 
 ```
-/src
-  /handlers - functions that are attached to the UI with event listeners
-  /init - code to initialize the application: importing listeners, and maybe render some UI
-  /listeners - short files that import handlers and attach them to the DOM
-  /logic - pure functions refactored out of handlers.  not all projects use this
-  /data.js - a file exporting JS data -> this file is the focus of the state module
-/index.html
-```
-
-Students did not have to write projects from scratch in the previous module, instead they studied projects from the [JavaScript30](https://javascript30.com/) then refactored to code into that folder structure. They did this for one week individually, then the second week as a group project.
-
-[TOP](#teaching-guide)
-
----
-
-## During this Module
-
-Projects in this module will be like projects in the last module with two changes:
-
-- a `/views` folder for JS functions that render data into DOM elements
-- a logging dependency in their handler files that allows them to log all interactions and state changes. you can see how this works in the `/separated` directory and in the [js-quiz-starter](https://github.com/HackYourFutureBelgium/js-quiz-starter) for this module's project
-
-```
+/lib
+  /logger.js - a dependency for logging user interactions
 /src
   /handlers - functions that are attached to the UI with event listeners
   /init - code to initialize the application: importing listeners, and maybe render some UI
@@ -58,6 +44,18 @@ Projects in this module will be like projects in the last module with two change
   /data.js - a file exporting JS data -> this file is the focus of the state module
 /index.html
 ```
+
+[TOP](#teaching-guide)
+
+---
+
+## During this Module
+
+Projects in this module will be like projects in the last module except they will each include an object with methods. At first the objects will just contain data and logic, but over time they will progress to:
+
+- binding handler methods to attach to the UI
+- using Object.create to reuse methods with different data
+- using Classes to create reusable UI components
 
 ### Week 1
 

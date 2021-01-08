@@ -1,13 +1,14 @@
 # Encapsulation
 
 > "Encapsulation is one of the fundamentals of OOP (object-oriented programming). It refers to the bundling of data with the methods that operate on that data. "
+>
 > - [Rebus](https://press.rebus.community/programmingfundamentals/chapter/encapsulation/)
 
-_Encapsulation_ is the idea of grouping together your data with the functions that use it. That's it! (for now :)  There are many ways to achieve this, but the end result is code that is easier to understand and nicer work with.
+_Encapsulation_ is the idea of grouping together your data with the functions that use it. That's it! (for now :) There are many ways to achieve this, but the end result is code that is easier to understand and nicer work with.
 
-Heads up!  In this module you'll be encountering some of the most important (and most challenging!) aspects of the JavaScript language `this`, inheritance & classes.  These are all features of JS that allow you to encapsulate functions & data for readable, reusable code.
+Heads up! In this module you'll be encountering some of the most important (and most challenging!) aspects of the JavaScript language `this`, inheritance & classes. These are all features of JS that allow you to encapsulate functions & data for readable, reusable code.
 
-Along the way you will get your first introduction to one of the main programming paradigms in JS: _object oriented_.  At their simplest level, programming paradigms are just different answers to the same question "How will I group my data and my functions?".
+Along the way you will get your first introduction to one of the main programming paradigms in JS: _object oriented_. At their simplest level, programming paradigms are just different answers to the same question "How will I group my data and my functions?".
 
 ## Contents
 
@@ -17,19 +18,20 @@ Along the way you will get your first introduction to one of the main programmin
   - [Hard Skills](#hard-skills)
 - [About the Projects](#about-the-projects)
 - [Suggested Study](#suggested-study)
-  - [Isolate](./isolate/index.html)
-  - [Integrate](./integrate/index.html)
 - Sundays & Projects
   - [Week 1](#week-1)
   - [Week 2](#week-2)
   - [Week 3](#week-3)
 - [Class Recordings](#class-recordings)
-- [Curriculum](https://home.hackyourfuture.be/curriculum) (external)
 - [HYF Home](https://home.hackyourfuture.be/) (external)
+- [Study Book](https://hackyourfuture.github.io/study/) (external)
 
 ---
 
 ## Learning Objectives
+
+<details>
+<summary>open/close</summary>
 
 ### Vocabulary
 
@@ -38,20 +40,14 @@ Along the way you will get your first introduction to one of the main programmin
 - **Inheritance**
 - **Code Reuse (DRY)**
 
-<details>
-<summary>Soft Skills</summary>
-
-- Data-first development
+* Data-first development
   - Understanding applications as Data + User Interactions
   - Developing from the "inside" out: Writing the core object before the user interface
-- Organizing your projects into _modules_
-- Object Oriented TDD
+* Organizing your projects into _modules_
+* Object Oriented TDD
   - Using tests to define and verify OOP programs
 
-</details>
-
-<details>
-<summary>Hard Skills</summary>
+### Hard Skills
 
 - Use the keyword `this`
   - Be able to refactor functions into methods
@@ -69,8 +65,8 @@ Along the way you will get your first introduction to one of the main programmin
   - How does each one treat `this` differently?
 - Closure 101:
   - Using `() => {}` handlers to avoid binding
-</details>
 
+</details>
 
 [TOP](#encapsulation)
 
@@ -78,12 +74,11 @@ Along the way you will get your first introduction to one of the main programmin
 
 ## About the Projects
 
-Projects in this module will have all the same concerns as projects in the last module, they'll just be organized a little differently.  In the last module every function was a free-floating function written in a separate file and required separately into your .html files.
+Projects in this module will have all the same concerns as projects in the last module, they'll just be organized a little differently. In the last module every function was a free-floating function written in a separate file and required separately into your .html files.
 
 In this module you'll learn how to:
 
 - _Encapsulate_ your application's data with the functions that operate on it using _object oriented programming_.
-- Organize your code base using _ES Modules_ (`import` and `export`). Yo
 - Reuse your methods with _inheritance_ and ES6 `class`es
 
 [TOP](#encapsulation)
@@ -91,6 +86,12 @@ In this module you'll learn how to:
 ---
 
 ## Suggested Study
+
+links to help with this module.
+
+<details>
+<summary>open/close</summary>
+<br>
 
 ### Helpful Links
 
@@ -143,66 +144,52 @@ In this module you'll learn how to:
 - Rolling Scopes: [TicTacToe](https://github.com/rolling-scopes-school/tic-tac-toe), [Finite State Machine](https://github.com/rolling-scopes-school/finite-state-machine)
 - [Kata for Fun (not only OOP)](https://github.com/edsonha/kata-for-fun)
 
+</details>
+<br>
+
 [TOP](#encapsulation)
 
 ---
 
 ## Week 1
 
-Learn to use `function () {}` functions and `this` to encapsulate your data and logic.
+Learn to use `function () {}` functions and `this` to encapsulate your data, logic and views.
 
-### Prep Work
+<details>
+<summary>open/close</summary>
+<br>
 
-> before class
+### Before Class
 
 - [Mosh explains `this`](https://www.youtube.com/watch?v=gvicrj31JOM)
 - [Traversy OOP Crashcourse](https://www.youtube.com/watch?v=vDJpGenyHaA) (first 10 minutes)
 - [javascript.info/object-methods](https://javascript.info/object-methods)
 - [StackOverflow](https://stackoverflow.com/questions/17486854/how-to-create-a-method-in-object-literal-notation)
 - [() => {} vs. function() {}](https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/)
-  - In this module you will be learning to use `function`
-- [Isolate](./isolate/index.html): Functions to Methods
+- Isolate:
+  - Functions to Methods (examples)
 
-### Lesson Plan
+### During Class
 
-> during class
+#### Before Break
 
-#### [Isolate](./isolate/index.html)
+- Isolate
+  - Functions to Methods
+  - Getters & Setters
 
-- Functions to Methods
-- Getters & Setters
+#### After Break
 
-#### [Integrate](./integrate/index.html)
+- Integrate
+  - 01-app-objects/exercises/average
 
-- Refactor Code-Along
+### After Class
 
-### Project
+No project this week.
 
-> after class
+Spend your time getting familiar with `this` and following the [Practical JavaScript Tutorial](https://watchandcode.com/p/practical-javascript) (best tutorial ever). It will be a great review of what we've covered at HYF. Take a moment to appreciate how much you've learned!
 
-__*this is an individual project*__
-
-Your project this week is to build something inspired by the [Practical JavaScript Tutorial](https://watchandcode.com/p/practical-javascript) (best tutorial ever).
-
-To help you get off the ground here is a [starter repository](https://github.com/HackYourFutureBelgium/encapsulation-week-1-starter). There is already some code to
-
-You don't find a todo app so interesting?  not a problem!  Your group is free to invent a new project idea, just be careful about _scoping_!
-
-#### Checklist
-
-```md
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- [ ] [live demo](https://_.github.io/_)
-- Project Planning
-  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-  - [ ] [Project board](https://github.com/_/_/projects/_)
-- Implementation
-  - [ ] Tests for core app object
-  - [ ] Tests for views (optional)
-  - [ ] Initial state in `src/data.js`
-  - [ ] Logs of each user interaction
-```
+</details>
+<br>
 
 [TOP](#encapsulation)
 
@@ -216,9 +203,11 @@ Learn to:
 - tell the difference between _static_ and _instance_ methods
 - use `Object.create` for code reuse
 
-### Prep Work
+<details>
+<summary>open/close</summary>
+<br>
 
-> before class
+### Before Class
 
 - Prototype Delegation
   - [Just JavaScript](https://github.com/HackYourFutureBelgium/just-javascript/tree/master/09-prototypes)
@@ -233,9 +222,7 @@ Learn to:
 - Code to Study:
   - [Cycler Refactor](./example-projects/refactors/cycler) through `5-create-many.html`
 
-### Lesson Plan
-
-> during class
+### During Class
 
 #### Before Break
 
@@ -246,28 +233,20 @@ Learn to:
 - Isolate: 8. `Object.create`
 - Integrate: 3. `Object.create`
 
-### Project
+### After Class
 
-> after class
+List Manager! Following up on the tutorial from last week, your group will be building a web page that allows users to create as many lists as they want. You will need to refactor the todo list from WatchAndCode into a prototype object that can be used to create so list instances. A suggestion: users can input a title and create a new list with that title.
 
-List Manager!  Following up on the tutorial from last week, your group will be building a web page that allows users to create as many lists as they want.  You will need to refactor the todo list from WatchAndCode into a prototype object that can be used to create so list instances.  A suggestion:  users can input a title and create a new list with that title.
-
-Along with prototypes, your group will be exploring `import` and `export`.  This week's [starter repository](https://github.com/HackYourFutureBelgium/starter-encapsulation-list-prototype) has the basics already in place for you.  Enjoy!
+This week's [starter repository](https://github.com/HackYourFutureBelgium/starter-encapsulation-list-prototype) has the basics already in place for you. Enjoy!
 
 #### Checklist
 
 ```md
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- [ ] [live demo](https://_.github.io/_)
-- Project Planning
-  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Communication](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-  - [ ] [Project board](https://github.com/_/_/projects/_)
-- Implementation
-  - [ ] ES Modules (`import`/`export`)
-  - [ ] Logs of each user interaction
+coming soon
 ```
+
+</details>
+<br>
 
 [TOP](#encapsulation)
 
@@ -277,9 +256,11 @@ Along with prototypes, your group will be exploring `import` and `export`.  This
 
 Learn to use `Class`es for a reusable code base.
 
-### Prep Work
+<details>
+<summary>open/close</summary>
+<br>
 
-> before class
+### Before Class
 
 - Classes
   - [Traversy](https://www.youtube.com/watch?v=RBLIm5LMrmc)
@@ -287,9 +268,7 @@ Learn to use `Class`es for a reusable code base.
   - [Beau](https://www.youtube.com/watch?v=bq_jZY6Skto)
   - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
-### Lesson Plan
-
-> during class
+### During Class
 
 #### Before Break
 
@@ -301,29 +280,22 @@ Learn to use `Class`es for a reusable code base.
 - [integrate](./integrate/index.html)
   - 5. Classes
 
-### Project
+### After Class
 
 > after class
 
 Impress yourselves! Using [this starter repository](https://github.com/HackYourFutureBelgium/encapsulation-starter-wk-3-class/), plan and scope a project of your choosing. This can be a totally new idea or a reworking of a previous project.
 
-If your group decides to continue last week's project, there's no need to move to a new repository.  Just try refactoring your project from prototypes to classes.
+If your group decides to continue last week's project, there's no need to move to a new repository. Just try refactoring your project from prototypes to classes.
 
 #### Checklist
 
 ```md
-- [ ] [repo](https://github.com/_/_) (with a complete README)
-- [ ] [live demo](https://_.github.io/_)
-- Project Planning
-  - [ ] [Backlog](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Communication](https://github.com/_/_/tree/master/project-planning/backlog.md)
-  - [ ] [Development Strategy](https://github.com/_/_/tree/master/project-planning/development-strategy.md)
-  - [ ] [Project board](https://github.com/_/_/projects/_)
-- Implementation
-  - [ ] ES Modules (`import`/`export`)
-  - [ ] at least one `class`
-  - [ ] Logs of each user interaction
+coming soon
 ```
+
+</details>
+<br>
 
 [TOP](#encapsulation)
 
@@ -345,22 +317,22 @@ Coaches, when sending your PR's with links please ...
 > [Anthony](https://github.com/Toinne/), [Bram](https://github.com/bramdevries/)
 
 1. week 1:
-    - Part 1: [`this`](https://vimeo.com/399611933)
-    - Part 2: [Object Oriented Programming](https://vimeo.com/399631422)
+   - Part 1: [`this`](https://vimeo.com/399611933)
+   - Part 2: [Object Oriented Programming](https://vimeo.com/399631422)
 2. week 2:
-    - Part 1: [binding, and why it matters](https://vimeo.com/401830596)
-    - Part 2: [binding handlers](https://vimeo.com/401853625)
+   - Part 1: [binding, and why it matters](https://vimeo.com/401830596)
+   - Part 2: [binding handlers](https://vimeo.com/401853625)
 
 ### [Class 9 & 10](https://hackyourfuture.be/class-9-10)
 
 > [Anthony](https://github.com/Toinne/), [Unmesh](https://github.com/unmeshvrije/), [Nawang](https://github.com/nawatend)
 
 1. Week 1:
-    - Part 1: [`this`](https://vimeo.com/453294595)
-    - Part 2: [OOP Refactor](https://vimeo.com/453294872)
+   - Part 1: [`this`](https://vimeo.com/453294595)
+   - Part 2: [OOP Refactor](https://vimeo.com/453294872)
 2. Week 2:
-    - Part 1: [getting/setting & Prototypes](https://vimeo.com/455538183)
-    - Part 2: [`Object.create` pt. 1](https://vimeo.com/455538415), [pt. 2](https://vimeo.com/455538951)
+   - Part 1: [getting/setting & Prototypes](https://vimeo.com/455538183)
+   - Part 2: [`Object.create` pt. 1](https://vimeo.com/455538415), [pt. 2](https://vimeo.com/455538951)
 3. Week 3:
-    - Part 1: [Isolating Classes](https://vimeo.com/457832595)
-    - Part 2: [Integrating Classes](https://vimeo.com/457832956)
+   - Part 1: [Isolating Classes](https://vimeo.com/457832595)
+   - Part 2: [Integrating Classes](https://vimeo.com/457832956)
