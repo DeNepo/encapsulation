@@ -21,9 +21,7 @@
   </head>
 
   <body>
-    <main id="user interface">
-      <button onclick="console.log(log)">log the logs</button>
-      <hr />
+    <main id="user-interface">
       <form id="add-number-form" action="#">
         <input id="number-input" type="number" value="0" />
         <button>add number to list</button>
@@ -37,30 +35,35 @@
       <div id="numbers-list"></div>
     </main>
 
-    <script id="log">
-      const log = [];
-    </script>
-
     <script id="app-object">
       'use strict';
-      const app = {
+      // you can test & explore the averager from your browser's console
+      const averager = {
         state: {
           numbers: [],
         },
         // getters and setters
+        get numbers() {
+          debugger;
+          // return a copied array of all numbers in state
+        },
         get average() {
+          debugger;
           // compute and return the average of all saved numbers
         },
         // write methods to interact with state
         //  you should not need access .state directly from the handler
         addNumber: function(newNumber) {
+          debugger;
           // add the newNumber to state
         },
         // view methods
         renderNumberList: function() {
-          // read from state to render a list of all numbers
+          debugger;
+          // use the numbers getter to render a list of all numbers
         },
         renderAverage: function() {
+          debugger;
           // use the `average` getter and render the average of your list
         },
       };

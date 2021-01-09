@@ -21,9 +21,7 @@
   </head>
 
   <body>
-    <main id="user interface">
-      <button onclick="console.log(log)">log the logs</button>
-      <hr />
+    <main id="user-interface">
       <form id="add-number-form" action="#">
         <input id="number-input" type="number" value="0" />
         <button>add number to list</button>
@@ -36,10 +34,6 @@
       <hr />
       <div id="numbers-list"></div>
     </main>
-
-    <script id="log">
-      const log = [];
-    </script>
 
     <script id="data">
       'use strict';
@@ -114,7 +108,7 @@
         const renderedList = renderNumberList(state.numbers);
         numbersContainer.appendChild(renderedList);
 
-        log.push({
+        console.log({
           action: 'add number',
           renderedList,
           renderedAverage,
@@ -140,7 +134,7 @@
         const numbersContainer = document.getElementById('numbers-list');
         numbersContainer.innerHTML = '';
 
-        log.push({
+        console.log({
           action: 'reset',
           renderedAverage,
           state: JSON.parse(JSON.stringify(state)),
@@ -163,9 +157,8 @@
       const renderedAverage = renderAverage(state.average);
       averageContainer.appendChild(renderedAverage);
 
-      // log new view rendered from state
-      initLog.viewAverage = renderedAverage;
-      log.push({
+      // log new view rendered from state]
+      console.log({
         initialState: JSON.parse(JSON.stringify(state)),
         renderedAverage,
       });

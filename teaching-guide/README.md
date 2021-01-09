@@ -59,23 +59,51 @@ Projects in this module will be like projects in the last module except they wil
 
 ### Week 1
 
-Before break, discuss what State is and how Logging is helpful by studying the `/separated` projects together. this can include:
+Before break, discuss `this` & the difference between a function and a method:
 
-- Explain what a state is (in programming context)
-- Explain what logging is (use average example to illustrate it)
-- Explain the views folder (compare the two summary/detail examples)
-- Practice looking at the most recent log and identifying where the data appears in the UI
+- in JS the difference is all about use-cases, there's no technical difference between functions and methods
+- `this` can access methods in the parent object
+- refactoring functions into methods
+- getters and setters can be used to hide (encapsulate) and object's data from the "outer world"
+  - this is all about good habits, JS object literals don't have true private classes
 
-After break, students will split into small groups to start planning the project. You can help out with scoping, task division, ... whatever they need help with.
+After break, do a refactor exercise all together. Refactor a small project made of functions into one that uses methods:
+
+- Study the first steps of the /refactors/cycler example
+- Integrate: 01-app-objects
+- you can ask a student to share their screen, then moderate the class as they suggest what to refactor
 
 ### Week 2
 
-Not much planned, this day is a chance to go over the projects all together and to review what was challenging in the last week. You might want to:
+Before break cover prototypical inheritance and how `Object.create` can be used to share methods between different data:
 
-- have each group do a quick standup to cover their progress
-- have one team share their screen and debug a problem they have all together
-- have each team share their wireframes, data.js files & dev-strategy
-- break into small groups for 1-1 coach/group time to review progress and help prepare for the next week
+- inspect examples of prototypes in the debugger (/isolate/07-prototype-delegation)
+- discuss how prototypes are useful in programming
+- inspect examples of Object.create in the debugger (/isolate/08-object-create)
+- discuss how Object.create is useful in a program
+
+After break, refactor a simple project from a single object literal instance to multiple instances with `Object.create`
+
+- read through the next steps in /refactors/cycler
+- Integrate: 03-object-create
+- you can ask a student to share their screen, then moderate the class as they suggest what to refactor
+
+[TOP](#teaching-guide)
+
+---
+
+### Week 3
+
+Before break cover prototypical inheritance and how ES6 Classes are written and how .prototype works behind the scenes:
+
+- inspect examples of prototypes in the debugger (/isolate/05-classes)
+- discuss how classes are useful for creating UI components
+
+After break, refactor a simple project from using `Object.create` to using Classes
+
+- read through the next steps in /refactors/cycler
+- Integrate: 04-classes
+- you can ask a student to share their screen, then moderate the class as they suggest what to refactor
 
 [TOP](#teaching-guide)
 
@@ -83,9 +111,7 @@ Not much planned, this day is a chance to go over the projects all together and 
 
 ## After this Module
 
-In the next module ([encapsulation](https://github.com/HackYourFutureBelgium/encapsulation), 3 weeks) students will learn how `this`, prototypes and `class`es can be used to group related functions and data into app objects. This won't cover `extend` or bigger concepts of OOP modeling, just enough to make good frontend projects.
-
-If you imagine grouping the functions from this module with the data.js into a single object/class and using `this` instead of import, then you're getting the idea.
+In the next module ([asynchronous-programming](https://github.com/HackYourFutureBelgium/asynchronous-programming), 3 weeks) students will learn how to use the event loop, scheduling, `fetch` and `async`/`await` in frontend projects built with UI Classes.
 
 [TOP](#teaching-guide)
 

@@ -179,7 +179,10 @@ Learn to use `function () {}` functions and `this` to encapsulate your data, log
 
 #### After Break
 
-- Integrate
+- ./refactors/cycler (example)
+  1. 1-separated
+  2. 2-encapsulated
+- Integrate (exercise)
   - 01-app-objects/exercises/average
 
 ### After Class
