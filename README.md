@@ -12,10 +12,8 @@ Along the way you will get your first introduction to one of the main programmin
 
 ## Contents
 
+- [Getting Started](#getting-started)
 - [Learning Objectives](#learning-objectives)
-  - [Vocabulary](#vocabulary)
-  - [Soft Skills](#soft-skills)
-  - [Hard Skills](#hard-skills)
 - [About the Projects](#about-the-projects)
 - [Suggested Study](#suggested-study)
 - Sundays & Projects
@@ -25,6 +23,44 @@ Along the way you will get your first introduction to one of the main programmin
 - [Class Recordings](#class-recordings)
 - [HYF Home](https://home.hackyourfuture.be/) (external)
 - [Study Book](https://hackyourfuture.github.io/study/) (external)
+
+---
+
+## Getting Started
+
+How to study the code in this repo.
+
+<details>
+<summary>expand/collapse</summary>
+<br>
+
+> You will need [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) on your computer to study this material
+>
+> Using a browser with good DevTools will make your life easier: [Chromium](http://www.chromium.org/getting-involved/download-chromium), [FireFox](https://www.mozilla.org/en-US/firefox/new/), [Edge](https://www.microsoft.com/edge), [Chrome](https://www.google.com/chrome/)
+
+1. Install or update the `study-lenses` package globally
+   - `npm install -g study-lenses` (if you do not have it already)
+   - `npm update -g study-lenses` (if you already have it installed)
+1. Clone this repository:
+   - `git clone git@github.com:HackYourFutureBelgium/encapsulation.git` (SSH) (recommended)
+   - `git clone https://github.com/HackYourFutureBelgium/encapsulation.git` (HTTPS)
+   - `gh repo clone HackYourFutureBelgium/encapsulation` (GH CLI)
+1. `cd` into the repository
+   - `cd state`
+1. Run the `study` command from your CLI
+   - `study`
+1. The material will open in your default browser, you're good to go!
+
+> If you have a windows computer and get this error:
+>
+> - `... /study.ps1 cannot be loaded because running scripts ...`
+>
+> follow the instructions in [this StackOverflow answer](https://stackoverflow.com/a/63424744), that should take care of it ; )
+
+</details>
+<br>
+
+[TOP](#encapsulation)
 
 ---
 
