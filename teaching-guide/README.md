@@ -57,6 +57,10 @@ Projects in this module will be like projects in the last module except they wil
 - using Object.create to reuse methods with different data
 - using Classes to create reusable UI components
 
+### Common Confusions
+
+> things students often struggle with in this module, mistakes you can expect to come across
+
 ### Week 1
 
 Before break, discuss `this` & the difference between a function and a method:
