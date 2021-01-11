@@ -216,8 +216,7 @@ Learn to use `function () {}` functions and `this` to encapsulate your data, log
 #### After Break
 
 - ./refactors/cycler (example)
-  1. 1-separated
-  2. 2-encapsulated
+  1. 2-encapsulated
 - Integrate (exercise)
   - 01-app-objects/exercises/average
 
@@ -226,6 +225,8 @@ Learn to use `function () {}` functions and `this` to encapsulate your data, log
 No project this week.
 
 Spend your time getting familiar with `this` and following the [Practical JavaScript Tutorial](https://watchandcode.com/p/practical-javascript) (best tutorial ever). It will be a great review of what we've covered at HYF. Take a moment to appreciate how much you've learned!
+
+Looking for a little challenge? Try refactoring the tutorial's final code into this [Practical JavaScript starter repo](https://github.com/HackYourFutureBelgium/practical-javascript-refactor-starter)
 
 </details>
 <br>
