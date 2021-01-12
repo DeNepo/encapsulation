@@ -363,7 +363,7 @@ Coaches, when sending your PR's with links please ...
    - Part 1: [binding, and why it matters](https://vimeo.com/401830596)
    - Part 2: [binding handlers](https://vimeo.com/401853625)
 
-### [Class 9 & 10](https://hackyourfuture.be/class-9-10)
+### [Class-9-10](https://hackyourfuturebelgium.github.io/class-9-10)
 
 > [Anthony](https://github.com/Toinne/), [Unmesh](https://github.com/unmeshvrije/), [Nawang](https://github.com/nawatend)
 
@@ -376,3 +376,11 @@ Coaches, when sending your PR's with links please ...
 3. Week 3:
    - Part 1: [Isolating Classes](https://vimeo.com/457832595)
    - Part 2: [Integrating Classes](https://vimeo.com/457832956)
+
+### [Class-11-12](https://github.com/hackyourfuturebelgium/class-11-12)
+
+> [Yash](https://github.com/yash-kapila), [Unmesh](https://github.com/unmeshvrije/), [Thibault](https://github.com/ThibaultLesuisse)
+
+1. Week 1:
+   - Part 1: [`this` & object methods](https://vimeo.com/499602299)
+   - Part 2: [more `this` & separated vs. encapsulated](https://vimeo.com/499602628)
