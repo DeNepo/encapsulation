@@ -41,5 +41,5 @@ obj2.modulo = 6;
 const test5 = JSON.stringify(obj1.mods) === __;
 console.assert(test5, 'Test 5');
 
-const test6 = JSON.stringify(obj1.mods) === __;
+const test6 = JSON.stringify(obj2.mods) === __;
 console.assert(test6, 'Test 6');
