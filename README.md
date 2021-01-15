@@ -275,15 +275,33 @@ Learn to:
 
 ### After Class
 
-List Manager! Following up on the tutorial from last week, your group will be building a web page that allows users to create as many lists as they want. You will need to refactor the todo list from WatchAndCode into a prototype object that can be used to create so list instances. A suggestion: users can input a title and create a new list with that title.
+> group or individual, your choice
 
-This week's [starter repository](https://github.com/HackYourFutureBelgium/starter-encapsulation-list-prototype) has the basics already in place for you. Enjoy!
+List Manager! Following up on the tutorial from last week, you will build a web page that allows users to create as many lists as they want, each with a different title. You will need to refactor the todo list from WatchAndCode into a prototype object that can be used to create new list instances with `Object.create`. There is a [starter repository](https://github.com/HackYourFutureBelgium/starter-encapsulation-list-prototype) with the basics to get you started. Enjoy!
 
 #### Checklist
 
+Individual Checklist:
+
 ```md
-coming soon
+- [ ] [repo](https://github.com/_/_) with a complete README
+- [ ] [live demo](https://_.github.io/_)
+- [ ] [project-planning](_https://github.com/_/_/tree/master/project-planning)
 ```
+
+Group Checklist:
+
+```md
+- [ ] [repo](https://github.com/_/_) with a complete README
+- [ ] [live demo](https://_.github.io/_)
+- [ ] [project-planning](_https://github.com/_/_/tree/master/project-planning)
+- [ ] [A project board](https://github.com/_/_/projects/X)
+- [ ] [One issue per task](https://github.com/_/_/issues) (with labels and milestones)
+- [ ] [One branch per issue](https://github.com/_/_/network)
+- [ ] [One reviewed PR per completed issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
+```
+
+> check out past classes for inspiration - [9-10](https://github.com/HackYourFutureBelgium/class-9-10/projects/7)
 
 </details>
 <br>
