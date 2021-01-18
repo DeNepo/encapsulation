@@ -402,3 +402,6 @@ Coaches, when sending your PR's with links please ...
 1. Week 1:
    - Part 1: [`this` & object methods](https://vimeo.com/499602299)
    - Part 2: [more `this` & separated vs. encapsulated](https://vimeo.com/499602628)
+1. Week 2:
+   - Part 1: [Prototypes](https://vimeo.com/501759856)
+   - Part 2: [More prototypes](https://vimeo.com/501760204)
