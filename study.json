@@ -1,3 +1,6 @@
 {
-  "--port": 4009
+  "--port": 4009,
+  "study": {
+    "save": true
+  }
 }
