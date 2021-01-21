@@ -117,6 +117,15 @@ In this module you'll learn how to:
 - _Encapsulate_ your application's data with the functions that operate on it using _object oriented programming_.
 - Reuse your methods with _inheritance_ and ES6 `class`es
 
+<details>
+<summary>project diagram</summary>
+<br/>
+
+![encapsulated architecture](./diagrams/projects-with-encapsulation.svg)
+
+</details>
+<br/>
+
 [TOP](#encapsulation)
 
 ---
@@ -294,14 +303,12 @@ Group Checklist:
 ```md
 - [ ] [repo](https://github.com/_/_) with a complete README
 - [ ] [live demo](https://_.github.io/_)
-- [ ] [project-planning](_https://github.com/_/_/tree/master/project-planning)
+- [ ] [planning](_https://github.com/_/_/tree/master/planning)
 - [ ] [A project board](https://github.com/_/_/projects/X)
 - [ ] [One issue per task](https://github.com/_/_/issues) (with labels and milestones)
 - [ ] [One branch per issue](https://github.com/_/_/network)
 - [ ] [One reviewed PR per completed issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
 ```
-
-> check out past classes for inspiration - [9-10](https://github.com/HackYourFutureBelgium/class-9-10/projects/7)
 
 </details>
 <br>
@@ -340,16 +347,20 @@ Learn to use `Class`es for a reusable code base.
 
 ### After Class
 
-> after class
+Impress yourselves!
 
-Impress yourselves! Using [this starter repository](https://github.com/HackYourFutureBelgium/encapsulation-starter-wk-3-class/), plan and scope a project of your choosing. This can be a totally new idea or a reworking of a previous project.
-
-If your group decides to continue last week's project, there's no need to move to a new repository. Just try refactoring your project from prototypes to classes.
+Using [this starter repository](https://github.com/hackyourfuturebelgium/classes-starter), plan and scope a project of your choosing. This can be a totally new idea or a refactor of a previous project, just keep it small ;)
 
 #### Checklist
 
 ```md
-coming soon
+- [ ] [repo](https://github.com/_/_) with a complete README
+- [ ] [live demo](https://_.github.io/_)
+- [ ] [planning](_https://github.com/_/_/tree/master/planning)
+- [ ] [A project board](https://github.com/_/_/projects/X)
+- [ ] [One issue per task](https://github.com/_/_/issues) (with labels and milestones)
+- [ ] [One branch per issue](https://github.com/_/_/network)
+- [ ] [One reviewed PR per completed issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
 ```
 
 </details>
