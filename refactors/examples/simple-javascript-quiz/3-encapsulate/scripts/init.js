@@ -1,5 +1,7 @@
 'use strict';
 
+import './listeners.js';
+
 import { app } from './app.js';
 
 const quizContainer = document.getElementById('quiz');
