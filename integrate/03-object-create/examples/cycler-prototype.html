@@ -31,10 +31,8 @@
         render: function() {
           const container = document.createElement('p');
           container.innerHTML = this.state.min;
-          container.addEventListener(
-            'click',
-            this.handleClick.bind(this, container)
-          );
+          const boundHandleClick = this.handleClick.bind(this, container);
+          container.addEventListener('click', boundHandleClick);
           return container;
         },
       };

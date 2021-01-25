@@ -416,3 +416,6 @@ Coaches, when sending your PR's with links please ...
 1. Week 2:
    - Part 1: [Prototypes](https://vimeo.com/501759856)
    - Part 2: [More prototypes](https://vimeo.com/501760204)
+1. Week 3:
+   - Part 1: [Classes](https://vimeo.com/504396242)
+   - Part 1: [Classes](https://vimeo.com/504395219)
