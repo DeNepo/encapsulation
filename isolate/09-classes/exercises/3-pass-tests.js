@@ -1,9 +1,10 @@
-'use strict';
+"use strict";
 
 // write the class
 //  hint: state should be an object of key/value pairs
 
 class EntriesManager {}
+
 
 // these two lines are correct!  don't change them
 const instanceA = new EntriesManager({ a: 1, b: 2 });
