@@ -7,7 +7,7 @@ const literalA = {
   },
   get odds() {
     return this.numbers.filter(num => num % 2 !== 0);
-  }
+  },
 };
 
 const literalB = {
@@ -17,12 +17,12 @@ const literalB = {
   },
   get odds() {
     return this.numbers.filter(num => num % 2 !== 0);
-  }
+  },
 };
 
 // the solution
 
-class EvenOdd { };
+class EvenOdd {}
 
 const instanceA = _;
 const instanceB = _;
@@ -39,8 +39,10 @@ const test2b = instanceB.hasOwnProperty('numbers');
 console.assert(test2a, 'Test 2.A - own properties');
 console.assert(test2b, 'Test 2.B');
 
-const test3a = !instanceA.hasOwnProperty('evens') && !instanceA.hasOwnProperty('odds');
-const test3b = !instanceB.hasOwnProperty('evens') && !instanceB.hasOwnProperty('odds');
+const test3a =
+  !instanceA.hasOwnProperty('evens') && !instanceA.hasOwnProperty('odds');
+const test3b =
+  !instanceB.hasOwnProperty('evens') && !instanceB.hasOwnProperty('odds');
 console.assert(test3a, 'Test 3.A - not-own properties');
 console.assert(test3b, 'Test 3.B');
 

@@ -117,6 +117,15 @@ In this module you'll learn how to:
 - _Encapsulate_ your application's data with the functions that operate on it using _object oriented programming_.
 - Reuse your methods with _inheritance_ and ES6 `class`es
 
+<details>
+<summary>project diagram</summary>
+<br/>
+
+![encapsulated architecture](./diagrams/projects-with-encapsulation.svg)
+
+</details>
+<br/>
+
 [TOP](#encapsulation)
 
 ---
@@ -275,14 +284,30 @@ Learn to:
 
 ### After Class
 
-List Manager! Following up on the tutorial from last week, your group will be building a web page that allows users to create as many lists as they want. You will need to refactor the todo list from WatchAndCode into a prototype object that can be used to create so list instances. A suggestion: users can input a title and create a new list with that title.
+> group or individual, your choice
 
-This week's [starter repository](https://github.com/HackYourFutureBelgium/starter-encapsulation-list-prototype) has the basics already in place for you. Enjoy!
+List Manager! Following up on the tutorial from last week, you will build a web page that allows users to create as many lists as they want, each with a different title. You will need to refactor the todo list from WatchAndCode into a prototype object that can be used to create new list instances with `Object.create`. There is a [starter repository](https://github.com/HackYourFutureBelgium/starter-encapsulation-list-prototype) with the basics to get you started. Enjoy!
 
 #### Checklist
 
+Individual Checklist:
+
 ```md
-coming soon
+- [ ] [repo](https://github.com/_/_) with a complete README
+- [ ] [live demo](https://_.github.io/_)
+- [ ] [project-planning](_https://github.com/_/_/tree/master/project-planning)
+```
+
+Group Checklist:
+
+```md
+- [ ] [repo](https://github.com/_/_) with a complete README
+- [ ] [live demo](https://_.github.io/_)
+- [ ] [planning](_https://github.com/_/_/tree/master/planning)
+- [ ] [A project board](https://github.com/_/_/projects/X)
+- [ ] [One issue per task](https://github.com/_/_/issues) (with labels and milestones)
+- [ ] [One branch per issue](https://github.com/_/_/network)
+- [ ] [One reviewed PR per completed issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
 ```
 
 </details>
@@ -322,16 +347,20 @@ Learn to use `Class`es for a reusable code base.
 
 ### After Class
 
-> after class
+Impress yourselves!
 
-Impress yourselves! Using [this starter repository](https://github.com/HackYourFutureBelgium/encapsulation-starter-wk-3-class/), plan and scope a project of your choosing. This can be a totally new idea or a reworking of a previous project.
-
-If your group decides to continue last week's project, there's no need to move to a new repository. Just try refactoring your project from prototypes to classes.
+Using [this starter repository](https://github.com/hackyourfuturebelgium/classes-starter), plan and scope a project of your choosing. This can be a totally new idea or a refactor of a previous project, just keep it small ;)
 
 #### Checklist
 
 ```md
-coming soon
+- [ ] [repo](https://github.com/_/_) with a complete README
+- [ ] [live demo](https://_.github.io/_)
+- [ ] [planning](_https://github.com/_/_/tree/master/planning)
+- [ ] [A project board](https://github.com/_/_/projects/X)
+- [ ] [One issue per task](https://github.com/_/_/issues) (with labels and milestones)
+- [ ] [One branch per issue](https://github.com/_/_/network)
+- [ ] [One reviewed PR per completed issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
 ```
 
 </details>
@@ -384,3 +413,9 @@ Coaches, when sending your PR's with links please ...
 1. Week 1:
    - Part 1: [`this` & object methods](https://vimeo.com/499602299)
    - Part 2: [more `this` & separated vs. encapsulated](https://vimeo.com/499602628)
+1. Week 2:
+   - Part 1: [Prototypes](https://vimeo.com/501759856)
+   - Part 2: [More prototypes](https://vimeo.com/501760204)
+1. Week 3:
+   - Part 1: [Classes](https://vimeo.com/504396242)
+   - Part 1: [Classes](https://vimeo.com/504395219)
