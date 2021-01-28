@@ -1,7 +1,32 @@
 'use strict';
 
+import { logger } from '../../../../../lib/logger.js';
+
 export const app = {
-  state: {},
+  state: {
+    numCorrect: 0,
+    userAnswers: [],
+    questions: [
+      {
+        question: 'What is 10/2?',
+        answers: {
+          a: '3',
+          b: '5',
+          c: '115',
+        },
+        correctAnswer: 'b',
+      },
+      {
+        question: 'What is 30/3?',
+        answers: {
+          a: '3',
+          b: '5',
+          c: '10',
+        },
+        correctAnswer: 'c',
+      },
+    ],
+  },
 
   // view methods
   renderQuestions: function() {
@@ -67,20 +92,20 @@ export const app = {
     }
     //  calculate new score
     let newNumCorrect = 0;
-    for (let i = 0; i < state.questions.length; i++) {
-      if (answers[i] === state.questions[i].correctAnswer) {
+    for (let i = 0; i < this.state.questions.length; i++) {
+      if (answers[i] === this.state.questions[i].correctAnswer) {
         newNumCorrect++;
       }
     }
 
     // -- update state with new user answers --
-    state.userAnswers = answers;
-    state.numCorrect = newNumCorrect;
+    this.state.userAnswers = answers;
+    this.state.numCorrect = newNumCorrect;
 
     // -- update UI to show correct/incorrect --
     //  set the color for each answer
-    for (let i = 0; i < state.questions.length; i++) {
-      if (state.userAnswers[i] === state.questions[i].correctAnswer) {
+    for (let i = 0; i < this.state.questions.length; i++) {
+      if (this.state.userAnswers[i] === this.state.questions[i].correctAnswer) {
         answerContainers[i].style.color = 'lightgreen';
       } else {
         answerContainers[i].style.color = 'red';

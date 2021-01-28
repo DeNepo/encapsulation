@@ -6,15 +6,13 @@ const MaxMinPrototype = {
   },
   addNumber(newNum) {
     // ... code ...
-  }
+  },
 };
 
 // write the class
 //  hint: state ---> { min: 'number', max: 'number' }
 
-class MaxMin {
-
-};
+class MaxMin {}
 
 // these two lines are correct! don't change them
 const instanceA = new MaxMin();
@@ -32,13 +30,18 @@ const test2b = instanceB.hasOwnProperty('state');
 console.assert(test2a, 'Test 2.A - own properties');
 console.assert(test2b, 'Test 2.B');
 
-const test3a = !instanceA.hasOwnProperty('spread') && !instanceA.hasOwnProperty('addNumber');
-const test3b = !instanceB.hasOwnProperty('spread') && !instanceB.hasOwnProperty('addNumber');
+const test3a =
+  !instanceA.hasOwnProperty('spread') && !instanceA.hasOwnProperty('addNumber');
+const test3b =
+  !instanceB.hasOwnProperty('spread') && !instanceB.hasOwnProperty('addNumber');
 console.assert(test3a, 'Test 3.A - not-own properties');
 console.assert(test3b, 'Test 3.B');
 
-const test4a = instanceA.state.max === -Infinity && instanceA.state.min === Infinity;
-const test4b = instanceA.state.max === -Infinity && instanceA.state.min === Infinity;
+// why do the initial values need to be Infinity and -Infinity?
+const test4a =
+  instanceA.state.max === -Infinity && instanceA.state.min === Infinity;
+const test4b =
+  instanceA.state.max === -Infinity && instanceA.state.min === Infinity;
 console.assert(test4a, 'Test 4.A - initial values');
 console.assert(test4b, 'Test 4.B');
 
@@ -54,6 +57,9 @@ const test6b = instanceB.state.max === -4 && instanceB.state.min === -4;
 console.assert(test6a, 'Test 6.A - addNumber');
 console.assert(test6b, 'Test 6.B');
 
+// hints:
+//  get
+//  spread is the difference between your numbers
 const test7a = instanceA.spread === 0;
 const test7b = instanceB.spread === 0;
 console.assert(test7a, 'Test 7.A - get spread');

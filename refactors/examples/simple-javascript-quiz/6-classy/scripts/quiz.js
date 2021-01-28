@@ -1,14 +1,17 @@
+'use strict';
+
+import { logger } from '../../../../../lib/logger.js';
+
 export class Quiz {
   state = {
     numCorrect: 0,
     userAnswers: [],
-    questions: []
-  }
+    questions: [],
+  };
 
   constructor(questions) {
     this.state.questions = [...questions];
   }
-
 
   renderQuestions() {
     const questions = this.state.questions;
@@ -17,26 +20,33 @@ export class Quiz {
 
     // for each question...
     for (var i = 0; i < questions.length; i++) {
-
       const questionAnswers = [];
 
       // for each available answer...
       for (const letter in questions[i].answers) {
-
         // ...add an html radio button
         questionAnswers.push(
-          '<label>'
-          + '<input type="radio" name="question' + i + '" value="' + letter + '">'
-          + letter + ': '
-          + questions[i].answers[letter]
-          + '</label>'
+          '<label>' +
+            '<input type="radio" name="question' +
+            i +
+            '" value="' +
+            letter +
+            '">' +
+            letter +
+            ': ' +
+            questions[i].answers[letter] +
+            '</label>'
         );
       }
 
       // add this question and its answers to the output
       output.push(
-        '<div class="question">' + questions[i].question + '</div>'
-        + '<div class="answers">' + questionAnswers.join('') + '</div>'
+        '<div class="question">' +
+          questions[i].question +
+          '</div>' +
+          '<div class="answers">' +
+          questionAnswers.join('') +
+          '</div>'
       );
     }
 
@@ -45,7 +55,6 @@ export class Quiz {
   }
 
   showResultsHandler() {
-
     // gather answer containers from our quiz
     const quizContainer = document.getElementById('quiz');
     const answerContainers = quizContainer.querySelectorAll('.answers');
@@ -54,14 +63,17 @@ export class Quiz {
     this.state.userAnswers = [];
     for (let i = 0; i < answerContainers.length; i++) {
       const answerContainer = answerContainers[i];
-      const userAnswer = (answerContainer.querySelector('input[name=question' + i + ']:checked') || {}).value;
+      const userAnswer = (
+        answerContainer.querySelector(
+          'input[name=question' + i + ']:checked'
+        ) || {}
+      ).value;
       this.state.userAnswers.push(userAnswer);
-    };
+    }
 
     // update UI to show correct/incorrect
     this.state.numCorrect = 0;
     for (let i = 0; i < this.state.questions.length; i++) {
-
       // if answer is correct
       if (this.state.userAnswers[i] === this.state.questions[i].correctAnswer) {
         // add to the number of correct answers
@@ -79,18 +91,30 @@ export class Quiz {
 
     // show number of correct answers out of total
     const resultsContainer = document.getElementById('results');
-    resultsContainer.innerHTML = this.state.numCorrect + ' out of ' + this.state.questions.length;
+    resultsContainer.innerHTML =
+      this.state.numCorrect + ' out of ' + this.state.questions.length;
 
+    logger.add({
+      handler: 'show results',
+      state: this.state,
+    });
   }
 
   init(containerId, submitId) {
-
-    document.getElementById(submitId)
+    document
+      .getElementById(submitId)
       .addEventListener('click', this.showResultsHandler.bind(this));
 
     const quizContainer = document.getElementById(containerId);
 
     // finally combine our output list into one string of html and put it on the page
     quizContainer.innerHTML = this.renderQuestions();
+
+    logger.add({
+      method: 'init',
+      containerId,
+      submitId,
+      state: this.state,
+    });
   }
-};
+}
