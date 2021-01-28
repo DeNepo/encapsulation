@@ -6,6 +6,9 @@ const remix = (str, mixer) => {
 const obj = {
   mixer: '',
   remixed: '',
+  getRemixed:function(){
+
+  },
   remix: function (str) { }
 };
 
