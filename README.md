@@ -145,6 +145,7 @@ links to help with this module.
 - Getters & Setters
   - [Mosh](https://programmingwithmosh.com/javascript/javascript-properties-getters-and-setters/)
   - [Zell](https://dev.to/zellwk/why-use-getters-and-setters-functions-5a5f)
+- [Playlist -'Complicated' elements of Javascript on simple examples (RUS + English subs)](https://www.youtube.com/playlist?list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT)
 
 ### Binding
 
