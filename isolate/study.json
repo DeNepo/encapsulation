@@ -3,7 +3,12 @@
     "eval": true,
     "openIn": "jsTutorLive",
     "trace": {
-      "this": true
+      "this": true,
+      "operators": false,
+      "controlFlow": false,
+      "variablesDeclare": false,
+      "variablesAssign": false,
+      "variablesRead": false
     }
   }
 }
