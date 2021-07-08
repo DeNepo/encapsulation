@@ -1,6 +1,9 @@
 {
   "study": {
     "eval": true,
-    "openIn": "jsTutorLive"
+    "openIn": "jsTutorLive",
+    "trace": {
+      "this": true
+    }
   }
 }
